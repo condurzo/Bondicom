@@ -93,12 +93,11 @@ public class OnlineMapsTextureControlEditor : Editor
 
         if (EditorGUI.EndChangeCheck()) dirty = true;
 
-		if ((GUILayout.Button("Remove"))||(LineaJson.Test02))
+		if (GUILayout.Button("Remove"))
         {
             control.markers3D[i] = null;
             hasDeleted = true;
             if (Application.isPlaying) Destroy(marker.instance);
-			LineaJson.Test02=false;
         }
         index++;
         EditorGUILayout.EndVertical();
@@ -140,7 +139,7 @@ public class OnlineMapsTextureControlEditor : Editor
 
             EditorGUILayout.Space();
 
-			if (GUILayout.Button("Add marker")||(LineaJson.Test01))
+			if (GUILayout.Button("Add marker"))
             {
                 if (!Application.isPlaying)
                 {
@@ -162,7 +161,7 @@ public class OnlineMapsTextureControlEditor : Editor
                     control.AddMarker3D(OnlineMaps.instance.position, prefab);
 				
                     DestroyImmediate(prefab);
-					LineaJson.Test01 = false;
+					//LineaJson.Test01 = false;
                 }
                 EditorUtility.SetDirty(control);
             }

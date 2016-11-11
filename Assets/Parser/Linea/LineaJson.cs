@@ -26,6 +26,10 @@ public class LineaJson : MonoBehaviour
 	public List<string> DestinoLista = new List<string>();
 	public List<double> Latitudes = new List<double>();
 	public List<double> Longitudes = new List<double>();
+	public List<float> LatitudesPokeParada = new List<float>();
+	public List<float> LongitudesPokeParada = new List<float>();
+	public float LatPokeParada;
+	public float LongPokeParada;
 	public string Latitud;
 	public string Longitud;
 	public double Lati;
@@ -42,11 +46,11 @@ public class LineaJson : MonoBehaviour
 	public Text Destino1,Destino2,Destino3,Destino4;
 	public OnlineMaps Mapas;
 	public OnlineMapsMarker3DInstance Control3D;
-	public GameObject PrefabPoke;
-	public static bool Test01;
-	public static bool HayUno;
-	public static bool Test02;
+	public GameObject PPoke1, PPoke12, PPoke39, PPoke68, PPoke102, PPoke110, PPoke126, PPoke501, PPoke503P, PPokeCOR, PPokeSPC;
 	public GameObject BlockeadorParadas;
+	public GameObject PokeScalar;
+	public int TempArray;
+	public string LineaPoke;
 
 #region LINEA
 	IEnumerator Start(){
@@ -90,15 +94,15 @@ public class LineaJson : MonoBehaviour
 	}
 
 	public void Linea1Btn(){
+		LineaPoke = "1";
 		BlockeadorParadas.SetActive (true);
-		if (HayUno) {
-			Test02 = true;
-			HayUno = false;
-		}
+		OnlineMapsControlBase3D.instance.RemoveAllMarker3D ();
 		idLinea = 253;
 		Paradas.Clear ();
 		Latitudes.Clear ();
 		Longitudes.Clear ();
+		LatitudesPokeParada.Clear ();
+		LongitudesPokeParada.Clear ();
 		foreach (GameObject listaPa in ParadasLista) {
 			listaPa.SetActive (false);	
 		}
@@ -109,15 +113,15 @@ public class LineaJson : MonoBehaviour
 		StartCoroutine (ParadasRutina ());
 	}
 	public void Linea12Btn(){
+		LineaPoke = "12";
 		BlockeadorParadas.SetActive (true);
-		if (HayUno) {
-			Test02 = true;
-			HayUno = false;
-		}
+		OnlineMapsControlBase3D.instance.RemoveAllMarker3D ();
 		idLinea = 254;
 		Paradas.Clear ();
 		Latitudes.Clear ();
 		Longitudes.Clear ();
+		LatitudesPokeParada.Clear ();
+		LongitudesPokeParada.Clear ();
 		foreach (GameObject listaPa in ParadasLista) {
 			listaPa.SetActive (false);	
 		}
@@ -128,15 +132,15 @@ public class LineaJson : MonoBehaviour
 		StartCoroutine (ParadasRutina ());
 	}
 	public void Linea39Btn(){
+		LineaPoke = "39";
 		BlockeadorParadas.SetActive (true);
-		if (HayUno) {
-			Test02 = true;
-			HayUno = false;
-		}
+		OnlineMapsControlBase3D.instance.RemoveAllMarker3D ();
 		idLinea = 255;
 		Paradas.Clear ();
 		Latitudes.Clear ();
 		Longitudes.Clear ();
+		LatitudesPokeParada.Clear ();
+		LongitudesPokeParada.Clear ();
 		foreach (GameObject listaPa in ParadasLista) {
 			listaPa.SetActive (false);	
 		}
@@ -147,15 +151,15 @@ public class LineaJson : MonoBehaviour
 		StartCoroutine (ParadasRutina ());
 	}
 	public void Linea68Btn(){
+		LineaPoke = "68";
 		BlockeadorParadas.SetActive (true);
-		if (HayUno) {
-			Test02 = true;
-			HayUno = false;
-		}
+		OnlineMapsControlBase3D.instance.RemoveAllMarker3D ();
 		idLinea = 306;
 		Paradas.Clear ();
 		Latitudes.Clear ();
 		Longitudes.Clear ();
+		LatitudesPokeParada.Clear ();
+		LongitudesPokeParada.Clear ();
 		foreach (GameObject listaPa in ParadasLista) {
 			listaPa.SetActive (false);	
 		}
@@ -166,15 +170,15 @@ public class LineaJson : MonoBehaviour
 		StartCoroutine (ParadasRutina ());
 	}
 	public void Linea102Btn(){
+		LineaPoke = "102";
 		BlockeadorParadas.SetActive (true);
-		if (HayUno) {
-			Test02 = true;
-			HayUno = false;
-		}
+		OnlineMapsControlBase3D.instance.RemoveAllMarker3D ();
 		idLinea = 308;
 		Paradas.Clear ();
 		Latitudes.Clear ();
 		Longitudes.Clear ();
+		LatitudesPokeParada.Clear ();
+		LongitudesPokeParada.Clear ();
 		foreach (GameObject listaPa in ParadasLista) {
 			listaPa.SetActive (false);	
 		}
@@ -185,15 +189,15 @@ public class LineaJson : MonoBehaviour
 		StartCoroutine (ParadasRutina ());
 	}
 	public void Linea110Btn(){
+		LineaPoke = "110";
 		BlockeadorParadas.SetActive (true);
-		if (HayUno) {
-			Test02 = true;
-			HayUno = false;
-		}
+		OnlineMapsControlBase3D.instance.RemoveAllMarker3D ();
 		idLinea = 315;
 		Paradas.Clear ();
 		Latitudes.Clear ();
 		Longitudes.Clear ();
+		LatitudesPokeParada.Clear ();
+		LongitudesPokeParada.Clear ();
 		foreach (GameObject listaPa in ParadasLista) {
 			listaPa.SetActive (false);	
 		}
@@ -204,15 +208,15 @@ public class LineaJson : MonoBehaviour
 		StartCoroutine (ParadasRutina ());
 	}
 	public void Linea126Btn(){
+		LineaPoke = "126";
 		BlockeadorParadas.SetActive (true);
-		if (HayUno) {
-			Test02 = true;
-			HayUno = false;
-		}
+		OnlineMapsControlBase3D.instance.RemoveAllMarker3D ();
 		idLinea = 300;
 		Paradas.Clear ();
 		Latitudes.Clear ();
 		Longitudes.Clear ();
+		LatitudesPokeParada.Clear ();
+		LongitudesPokeParada.Clear ();
 		foreach (GameObject listaPa in ParadasLista) {
 			listaPa.SetActive (false);	
 		}
@@ -223,15 +227,15 @@ public class LineaJson : MonoBehaviour
 		StartCoroutine (ParadasRutina ());
 	}
 	public void Linea501Btn(){
+		LineaPoke = "501";
 		BlockeadorParadas.SetActive (true);
-		if (HayUno) {
-			Test02 = true;
-			HayUno = false;
-		}
+		OnlineMapsControlBase3D.instance.RemoveAllMarker3D ();
 		idLinea = 244;
 		Paradas.Clear ();
 		Latitudes.Clear ();
 		Longitudes.Clear ();
+		LatitudesPokeParada.Clear ();
+		LongitudesPokeParada.Clear ();
 		foreach (GameObject listaPa in ParadasLista) {
 			listaPa.SetActive (false);	
 		}
@@ -242,34 +246,34 @@ public class LineaJson : MonoBehaviour
 		StartCoroutine (ParadasRutina ());
 	}
 	public void Linea503PBtn(){
-		//BlockeadorParadas.SetActive (true);
-//		if (HayUno) {
-//			Test02 = true;
-//			HayUno = false;
-//		}
-//		idLinea = 237;
-		//		Paradas.Clear ();
-		//Latitudes.Clear ();
-		//Longitudes.Clear ();
-//		foreach (GameObject listaPa in ParadasLista) {
-//			listaPa.SetActive (false);	
-		//		}
-		//Barra.SetActive (true);
-//		ListaParadaGO.GetComponent<CanvasGroup> ().alpha = 1;
-//		ListaParadaGO.GetComponent<CanvasGroup> ().blocksRaycasts = true;
-//		ListaParadaGO.GetComponent<CanvasGroup> ().interactable = true;
-//		StartCoroutine (ParadasRutina ());
+		LineaPoke = "503P";
+		BlockeadorParadas.SetActive (true);
+		OnlineMapsControlBase3D.instance.RemoveAllMarker3D ();
+		idLinea = 237;
+		Paradas.Clear ();
+		Latitudes.Clear ();
+		Longitudes.Clear ();
+		LatitudesPokeParada.Clear ();
+		LongitudesPokeParada.Clear ();
+		foreach (GameObject listaPa in ParadasLista) {
+			listaPa.SetActive (false);	
+				}
+		Barra.SetActive (true);
+		ListaParadaGO.GetComponent<CanvasGroup> ().alpha = 1;
+		ListaParadaGO.GetComponent<CanvasGroup> ().blocksRaycasts = true;
+		ListaParadaGO.GetComponent<CanvasGroup> ().interactable = true;
+		StartCoroutine (ParadasRutina ());
 	}
 	public void LineaCORBtn(){
+		LineaPoke = "COR";
 		BlockeadorParadas.SetActive (true);
-		if (HayUno) {
-			Test02 = true;
-			HayUno = false;
-		}
+		OnlineMapsControlBase3D.instance.RemoveAllMarker3D ();
 		idLinea = 280;
 		Paradas.Clear ();
 		Latitudes.Clear ();
 		Longitudes.Clear ();
+		LatitudesPokeParada.Clear ();
+		LongitudesPokeParada.Clear ();
 		foreach (GameObject listaPa in ParadasLista) {
 			listaPa.SetActive (false);	
 		}
@@ -280,15 +284,15 @@ public class LineaJson : MonoBehaviour
 		StartCoroutine (ParadasRutina ());
 	}
 	public void LineaSPCBtn(){
+		LineaPoke = "SPC";
 		BlockeadorParadas.SetActive (true);
-		if (HayUno) {
-			Test02 = true;
-			HayUno = false;
-		}
+		OnlineMapsControlBase3D.instance.RemoveAllMarker3D ();
 		idLinea = 318;
 		Paradas.Clear ();
 		Latitudes.Clear ();
 		Longitudes.Clear ();
+		LatitudesPokeParada.Clear ();
+		LongitudesPokeParada.Clear ();
 		foreach (GameObject listaPa in ParadasLista) {
 			listaPa.SetActive (false);	
 		}
@@ -356,7 +360,11 @@ public class LineaJson : MonoBehaviour
 			double.TryParse (Longitud, out Longi);
 			Latitudes.Add (Lati);
 			Longitudes.Add (Longi);
-			// ACA AGREGAR UNA LITA DE LAT Y OTRA D LONG y sertear cuando elijo la Parada mas abajo.
+
+			LatPokeParada = float.Parse(parada.Latitud);
+			LongPokeParada = float.Parse(parada.Longitud);
+			LatitudesPokeParada.Add (LatPokeParada);
+			LongitudesPokeParada.Add (LongPokeParada);
 		}
 	}
 
@@ -397,9 +405,44 @@ public class LineaJson : MonoBehaviour
 		OnlineMaps.latitude = Latitudes[index];
 		OnlineMaps.longitude = Longitudes[index];
 
+		switch (LineaPoke) {
+		case "1":
+			OnlineMapsControlBase3D.instance.AddMarker3D(new Vector2 (LongitudesPokeParada[index], LatitudesPokeParada[index]),PPoke1);
+			break;
+		case "12":
+			OnlineMapsControlBase3D.instance.AddMarker3D(new Vector2 (LongitudesPokeParada[index], LatitudesPokeParada[index]),PPoke12);
+			break;
+		case "39":
+			OnlineMapsControlBase3D.instance.AddMarker3D(new Vector2 (LongitudesPokeParada[index], LatitudesPokeParada[index]),PPoke39);
+			break;
+		case "68":
+			OnlineMapsControlBase3D.instance.AddMarker3D(new Vector2 (LongitudesPokeParada[index], LatitudesPokeParada[index]),PPoke68);
+			break;
+		case "102":
+			OnlineMapsControlBase3D.instance.AddMarker3D(new Vector2 (LongitudesPokeParada[index], LatitudesPokeParada[index]),PPoke102);
+			break;
+		case "110":
+			OnlineMapsControlBase3D.instance.AddMarker3D(new Vector2 (LongitudesPokeParada[index], LatitudesPokeParada[index]),PPoke110);
+			break;
+		case "126":
+			OnlineMapsControlBase3D.instance.AddMarker3D(new Vector2 (LongitudesPokeParada[index], LatitudesPokeParada[index]),PPoke126);
+			break;
+		case "501":
+			OnlineMapsControlBase3D.instance.AddMarker3D(new Vector2 (LongitudesPokeParada[index], LatitudesPokeParada[index]),PPoke501);
+			break;
+		case "503P":
+			OnlineMapsControlBase3D.instance.AddMarker3D(new Vector2 (LongitudesPokeParada[index], LatitudesPokeParada[index]),PPoke503P);
+			break;
+		case "COR":
+			OnlineMapsControlBase3D.instance.AddMarker3D(new Vector2 (LongitudesPokeParada[index], LatitudesPokeParada[index]),PPokeCOR);
+			break;
+		case "SPC":
+			OnlineMapsControlBase3D.instance.AddMarker3D(new Vector2 (LongitudesPokeParada[index], LatitudesPokeParada[index]),PPokeSPC);
+			break;
+			
+		}
 
 		StartCoroutine (InfoParada ());
-
 
 	}
 
@@ -461,36 +504,38 @@ public class LineaJson : MonoBehaviour
 			CartelLista.Add(prediccion.cartel.ToString());
 			ArriboLista.Add(prediccion.t.ToString());
 			DestinoLista.Add(prediccion.hacia.ToString());
+			TempArray = i;
+			Debug.Log (TempArray);
 			//aca agregar una Lista para las lat y long de los colectivos.
 
-//			Latitud = prediccion.lat;
-//			Longitud = prediccion.lon;
-//			double.TryParse (Latitud, out Lati);
-//			double.TryParse (Longitud, out Longi);
+		}
+		if (TempArray >= 0) {
+			Interno1.text = InternoLista [0];	
+			Cartel1.text = CartelLista [0];
+			Arribo1.text = ArriboLista [0];
+			Destino1.text = DestinoLista [0];
+		}
+		if (TempArray >= 1) {
+			Interno2.text = InternoLista [1];	
+			Cartel2.text = CartelLista [1];		
+			Arribo2.text = ArriboLista [1];		
+			Destino2.text = DestinoLista [1];
+		}
+		if (TempArray >= 2) {
+			Cartel3.text = CartelLista [2];		
+			Interno3.text = InternoLista [2];	
+			Arribo3.text = ArriboLista [2];		
+			Destino3.text = DestinoLista [2];	
+		}
+		if (TempArray >= 3) {
+			Cartel4.text = CartelLista [3];
+			Interno4.text = InternoLista [3];
+			Arribo4.text = ArriboLista [3];
+			Destino4.text = DestinoLista [3];
 		}
 
-		Interno1.text = InternoLista [0];	
-		Cartel1.text = CartelLista [0];
-		Arribo1.text = ArriboLista [0];
-		Destino1.text = DestinoLista [0];
-		Interno2.text = InternoLista [1];	
-		Cartel2.text = CartelLista [1];		
-		Arribo2.text = ArriboLista [1];		
-		Destino2.text = DestinoLista [1];	
-		Cartel3.text = CartelLista [2];		
-		Interno3.text = InternoLista [2];	
-		Arribo3.text = ArriboLista [2];		
-		Destino3.text = DestinoLista [2];	
-		Cartel4.text = CartelLista [3];
-		Interno4.text = InternoLista [3];
-		Arribo4.text = ArriboLista [3];
-		Destino4.text = DestinoLista [3];
-		//OnlineMaps.latitude = Lati;
-		//OnlineMaps.longitude = Longi;
 
 		BlockeadorParadas.SetActive (false);
-		Test01 = true;
-		HayUno = true;
 		Mapas.zoom = 15;
 		Mapas.zoom = 16;
 

@@ -8,10 +8,17 @@ public class MenuBtn : MonoBehaviour {
 	public bool states;
 	public GameObject[] BotonesMenu;
 	public GameObject SalirCartel;
+	public GameObject BlockSalir;
 	public GameObject MenuGris;
 	public GameObject BtnOpen;
 	public GameObject BtnClose;
 	public GameObject Blockeador;
+	public GameObject CartelDatos;
+
+	public GameObject Interno1,Interno2,Interno3,Interno4;
+	public GameObject Cartel1,Cartel2,Cartel3,Cartel4;
+	public GameObject Arribo1,Arribo2,Arribo3,Arribo4;
+	public GameObject Destino1,Destino2,Destino3,Destino4;
 	//<uses-sdk android:minSdkVersion="9" android:targetSdkVersion="24" />
 
 	public void OpenMenu () {
@@ -49,12 +56,69 @@ public class MenuBtn : MonoBehaviour {
 
 	void Update(){
 		if (Input.GetKeyDown (KeyCode.Escape)) {
-			SalirCartel.SetActive (true);
+			SalirBtn ();
 		}
+
+		if (Activacion.activarCartel) {
+			CartelDatos.SetActive (true);
+			Activacion.activarCartel = false;
+		}
+		if (Activacion.desactivoCartel) {
+			CartelDatos.SetActive (false);
+			Activacion.desactivoCartel = false;
+		}
+		if (Activacion.activoDatosCartel) {
+			Interno1.SetActive (true);
+			Cartel1.SetActive (true);
+			Arribo1.SetActive (true);
+			Destino1.SetActive (true);
+			Interno2.SetActive (true);
+			Cartel2.SetActive (true);	
+			Arribo2.SetActive (true);
+			Destino2.SetActive (true);
+			Cartel3.SetActive (true);		
+			Interno3.SetActive (true);
+			Arribo3.SetActive (true);	
+			Destino3.SetActive (true);	
+			Cartel4.SetActive (true);
+			Interno4.SetActive (true);
+			Arribo4.SetActive (true);
+			Destino4.SetActive (true);
+			Activacion.activoDatosCartel = false;
+		}
+		if (Activacion.desactivoDatosCartel) {
+			Interno1.SetActive (false);
+			Cartel1.SetActive (false);
+			Arribo1.SetActive (false);
+			Destino1.SetActive (false);
+			Interno2.SetActive (false);
+			Cartel2.SetActive (false);	
+			Arribo2.SetActive (false);
+			Destino2.SetActive (false);
+			Cartel3.SetActive (false);		
+			Interno3.SetActive (false);
+			Arribo3.SetActive (false);	
+			Destino3.SetActive (false);	
+			Cartel4.SetActive (false);
+			Interno4.SetActive (false);
+			Arribo4.SetActive (false);
+			Destino4.SetActive (false);
+			Activacion.desactivoDatosCartel = false;
+		}
+	}
+	public void SalirBtn(){
+		SalirCartel.SetActive (true);
+		BlockSalir.SetActive (true);
 	}
 
 	public void ExitApp(){
 		Application.Quit ();
 	}
+
+	public void CancelExit(){
+		SalirCartel.SetActive (false);
+		BlockSalir.SetActive (false);
+	}
+		
 
 }

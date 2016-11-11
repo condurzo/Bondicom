@@ -1,0 +1,444 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>10.0.20506</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <RootNamespace></RootNamespace>
+    <ProjectGuid>{CAEF98E3-01C4-9183-8EE5-7290E7D767AE}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <AssemblyName>Assembly-CSharp</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <BaseDirectory>Assets</BaseDirectory>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>Temp\bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;UNITY_5_3_OR_NEWER;UNITY_5_4_OR_NEWER;UNITY_5_4_1;UNITY_5_4;UNITY_5;ENABLE_NEW_BUGREPORTER;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_EDITOR_RETINA;ENABLE_RETINA_GUISTYLES;ENABLE_FRAME_DEBUGGER;ENABLE_GENERICS;ENABLE_HOME_SCREEN;ENABLE_IMAGEEFFECTS;ENABLE_LIGHT_PROBES_LEGACY;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_PLUGIN_INSPECTOR;ENABLE_SHADOWS;ENABLE_SPRITERENDERER_FLIPPING;ENABLE_SPRITES;ENABLE_SPRITE_POLYGON;ENABLE_TERRAIN;ENABLE_RAKNET;ENABLE_UNET;ENABLE_UNITYEVENTS;ENABLE_VR;ENABLE_WEBCAM;ENABLE_WWW;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_COLLAB;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_HUB;ENABLE_CLOUD_PROJECT_ID;ENABLE_CLOUD_SERVICES_CRASH_REPORTING;ENABLE_CLOUD_SERVICES_PURCHASING;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_UNET;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_CLOUD_LICENSE;ENABLE_EDITOR_METRICS;ENABLE_EDITOR_METRICS_CACHING;INCLUDE_DYNAMIC_GI;INCLUDE_GI;INCLUDE_IL2CPP;INCLUDE_DIRECTX12;PLATFORM_SUPPORTS_MONO;INCLUDE_PUBNUB;ENABLE_LOCALIZATION;ENABLE_ANDROID_ATLAS_ETC1_COMPRESSION;ENABLE_EDITOR_TESTS_RUNNER;UNITY_ANDROID;UNITY_ANDROID_API;ENABLE_SUBSTANCE;ENABLE_TEXTUREID_MAP;ENABLE_EGL;ENABLE_NETWORK;ENABLE_RUNTIME_GI;ENABLE_CRUNCH_TEXTURE_COMPRESSION;ENABLE_UNITYWEBREQUEST;PLATFORM_SUPPORTS_ADS_ID;UNITY_CAN_SHOW_SPLASH_SCREEN;ENABLE_UNITYADS_RUNTIME;UNITY_UNITYADS_API;ENABLE_MONO;ENABLE_PROFILER;UNITY_ASSERTIONS;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_OSX</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoWarn>0169</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>Temp\bin\Release\</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoWarn>0169</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.XML" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="UnityEngine">
+      <HintPath>/Applications/Unity/Unity.app/Contents/Managed/UnityEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor">
+      <HintPath>/Applications/Unity/Unity.app/Contents/Managed/UnityEditor.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+     <Compile Include="Assets\FingerGestures Samples\1) Finger Events\Scripts\FingerEventsSamplePart1.cs" />
+     <Compile Include="Assets\FingerGestures Samples\1) Finger Events\Scripts\FingerEventsSamplePart2.cs" />
+     <Compile Include="Assets\FingerGestures Samples\2) Gestures\Scripts\BasicGesturesSample.cs" />
+     <Compile Include="Assets\FingerGestures Samples\2) Gestures\Scripts\PinchTwistSample.cs" />
+     <Compile Include="Assets\FingerGestures Samples\2) Gestures\Scripts\PointCloudGestureRenderer.cs" />
+     <Compile Include="Assets\FingerGestures Samples\2) Gestures\Scripts\PointCloudGestureSample.cs" />
+     <Compile Include="Assets\FingerGestures Samples\3) Toolbox\Scripts\DragTrail.cs" />
+     <Compile Include="Assets\FingerGestures Samples\3) Toolbox\Scripts\EmitParticlesOnSwipe.cs" />
+     <Compile Include="Assets\FingerGestures Samples\3) Toolbox\Scripts\ToolboxDragSample.cs" />
+     <Compile Include="Assets\FingerGestures Samples\3) Toolbox\Scripts\ToolboxFingerEventsSample.cs" />
+     <Compile Include="Assets\FingerGestures Samples\3) Toolbox\Scripts\ToolboxOneFingerGestureSample.cs" />
+     <Compile Include="Assets\FingerGestures Samples\Assets\Scripts\BasicSample.cs" />
+     <Compile Include="Assets\FingerGestures Samples\Assets\Scripts\EmitParticles.cs" />
+     <Compile Include="Assets\FingerGestures Samples\Assets\Scripts\MaxFPS.cs" />
+     <Compile Include="Assets\FingerGestures Samples\Assets\Scripts\MenuNode.cs" />
+     <Compile Include="Assets\FingerGestures Samples\Assets\Scripts\SampleBase.cs" />
+     <Compile Include="Assets\FingerGestures Samples\Assets\Scripts\SampleUI.cs" />
+     <Compile Include="Assets\FingerGestures Samples\Assets\Scripts\StartMenu.cs" />
+     <Compile Include="Assets\FingerGestures Samples\Assets\Scripts\SwipeParticlesEmitter.cs" />
+     <Compile Include="Assets\OneSignal\Example\GameControllerExample.cs" />
+     <Compile Include="Assets\OneSignal\src\MiniJSON.cs" />
+     <Compile Include="Assets\OneSignal\src\OneSignal.cs" />
+     <Compile Include="Assets\OneSignal\src\OneSignalAndroid.cs" />
+     <Compile Include="Assets\OneSignal\src\OneSignalIOS.cs" />
+     <Compile Include="Assets\OneSignal\src\OneSignalPlatform.cs" />
+     <Compile Include="Assets\OneSignal\src\OneSignalWPWNS.cs" />
+     <Compile Include="Assets\Online maps\Examples (API usage)\CacheTilesExample.cs" />
+     <Compile Include="Assets\Online maps\Examples (API usage)\CalcAreaExample.cs" />
+     <Compile Include="Assets\Online maps\Examples (API usage)\ChangeMapTextureExample.cs" />
+     <Compile Include="Assets\Online maps\Examples (API usage)\ChangeMarkerTextureExample.cs" />
+     <Compile Include="Assets\Online maps\Examples (API usage)\ChangePositionAndZoomEventsExample.cs" />
+     <Compile Include="Assets\Online maps\Examples (API usage)\CheckIntenetConnectionExample.cs" />
+     <Compile Include="Assets\Online maps\Examples (API usage)\ControlDataTrafficExample.cs" />
+     <Compile Include="Assets\Online maps\Examples (API usage)\CustomDownloadTileExample.cs" />
+     <Compile Include="Assets\Online maps\Examples (API usage)\DetectWaterByTextureExample.cs" />
+     <Compile Include="Assets\Online maps\Examples (API usage)\DistanceAndDirectionExample.cs" />
+     <Compile Include="Assets\Online maps\Examples (API usage)\DottedLineExample.cs" />
+     <Compile Include="Assets\Online maps\Examples (API usage)\DragMarkerAndTranslateMapExample.cs" />
+     <Compile Include="Assets\Online maps\Examples (API usage)\DragMarkerByLongPressExample.cs" />
+     <Compile Include="Assets\Online maps\Examples (API usage)\DrawingAPI_Example.cs" />
+     <Compile Include="Assets\Online maps\Examples (API usage)\DrawingElementEventsExample.cs" />
+     <Compile Include="Assets\Online maps\Examples (API usage)\FindAutocompleteExample.cs" />
+     <Compile Include="Assets\Online maps\Examples (API usage)\FindDirectionExample.cs" />
+     <Compile Include="Assets\Online maps\Examples (API usage)\FindLocationExample.cs" />
+     <Compile Include="Assets\Online maps\Examples (API usage)\FindLocationNameExample.cs" />
+     <Compile Include="Assets\Online maps\Examples (API usage)\FindPlacesExample.cs" />
+     <Compile Include="Assets\Online maps\Examples (API usage)\GetCenterPointOfMarkersExample.cs" />
+     <Compile Include="Assets\Online maps\Examples (API usage)\GetElevationExample.cs" />
+     <Compile Include="Assets\Online maps\Examples (API usage)\GroupMarkersExample.cs" />
+     <Compile Include="Assets\Online maps\Examples (API usage)\InertiaExample.cs" />
+     <Compile Include="Assets\Online maps\Examples (API usage)\InterceptElevationRequestExample.cs" />
+     <Compile Include="Assets\Online maps\Examples (API usage)\LockPositionAndZoomExample.cs" />
+     <Compile Include="Assets\Online maps\Examples (API usage)\Marker3D_Example.cs" />
+     <Compile Include="Assets\Online maps\Examples (API usage)\Marker3D_GPS_Example.cs" />
+     <Compile Include="Assets\Online maps\Examples (API usage)\MarkerClickCountExample.cs" />
+     <Compile Include="Assets\Online maps\Examples (API usage)\MarkerClickExample.cs" />
+     <Compile Include="Assets\Online maps\Examples (API usage)\MarkerCustomDataExample.cs" />
+     <Compile Include="Assets\Online maps\Examples (API usage)\MarkerScaleByZoomExample.cs" />
+     <Compile Include="Assets\Online maps\Examples (API usage)\Marker_GPS_Example.cs" />
+     <Compile Include="Assets\Online maps\Examples (API usage)\ModifyTooltipStyleExample.cs" />
+     <Compile Include="Assets\Online maps\Examples (API usage)\MoveMarkerOnRouteExample.cs" />
+     <Compile Include="Assets\Online maps\Examples (API usage)\MoveMarkersExample.cs" />
+     <Compile Include="Assets\Online maps\Examples (API usage)\NGUI\NGUICustomMarkerExample.cs" />
+     <Compile Include="Assets\Online maps\Examples (API usage)\NGUI\NGUICustomMarkerSystemExample.cs" />
+     <Compile Include="Assets\Online maps\Examples (API usage)\OSMRequestExample.cs" />
+     <Compile Include="Assets\Online maps\Examples (API usage)\OnDrawTooltipExample.cs" />
+     <Compile Include="Assets\Online maps\Examples (API usage)\OnHoverExample.cs" />
+     <Compile Include="Assets\Online maps\Examples (API usage)\RealTilesetSizeExample.cs" />
+     <Compile Include="Assets\Online maps\Examples (API usage)\ResetCameraRotationExample.cs" />
+     <Compile Include="Assets\Online maps\Examples (API usage)\RotateMapInsteadMarkerExample.cs" />
+     <Compile Include="Assets\Online maps\Examples (API usage)\RoteteCameraByGPSExample.cs" />
+     <Compile Include="Assets\Online maps\Examples (API usage)\SaveMapStateExample.cs" />
+     <Compile Include="Assets\Online maps\Examples (API usage)\SaveMarker3DExample.cs" />
+     <Compile Include="Assets\Online maps\Examples (API usage)\SaveMarkersExample.cs" />
+     <Compile Include="Assets\Online maps\Examples (API usage)\ScreenToGeoExample.cs" />
+     <Compile Include="Assets\Online maps\Examples (API usage)\ShowMarkerLabelsByZoomExample.cs" />
+     <Compile Include="Assets\Online maps\Examples (API usage)\SmoothMoveExample.cs" />
+     <Compile Include="Assets\Online maps\Examples (API usage)\TilesetFadeExample.cs" />
+     <Compile Include="Assets\Online maps\Examples (API usage)\TilesetMapTilerOverlayExample.cs" />
+     <Compile Include="Assets\Online maps\Examples (API usage)\TilesetMarkerDepthExample.cs" />
+     <Compile Include="Assets\Online maps\Examples (API usage)\TilesetOverlayExample.cs" />
+     <Compile Include="Assets\Online maps\Examples (API usage)\TooltipWithoutBackgroundExample.cs" />
+     <Compile Include="Assets\Online maps\Examples (API usage)\uGUI\uGUICustomMarkerEngineExample.cs" />
+     <Compile Include="Assets\Online maps\Examples (API usage)\uGUI\uGUICustomMarkerExample.cs" />
+     <Compile Include="Assets\Online maps\Examples (API usage)\uGUI\uGUICustomTooltipExample.cs" />
+     <Compile Include="Assets\Online maps\Examples\Scripts\Aircraft.cs" />
+     <Compile Include="Assets\Online maps\Examples\Scripts\AircraftWarning.cs" />
+     <Compile Include="Assets\Online maps\Examples\Scripts\ExampleGUI.cs" />
+     <Compile Include="Assets\Online maps\Examples\Scripts\GUITextureSize.cs" />
+     <Compile Include="Assets\Online maps\GeoNativo.cs" />
+     <Compile Include="Assets\Online maps\Scripts\Controls\OnlineMapsControlBase.cs" />
+     <Compile Include="Assets\Online maps\Scripts\Controls\OnlineMapsControlBase2D.cs" />
+     <Compile Include="Assets\Online maps\Scripts\Controls\OnlineMapsControlBase3D.cs" />
+     <Compile Include="Assets\Online maps\Scripts\Controls\OnlineMapsDFGUITextureControl.cs" />
+     <Compile Include="Assets\Online maps\Scripts\Controls\OnlineMapsGUITextureControl.cs" />
+     <Compile Include="Assets\Online maps\Scripts\Controls\OnlineMapsIGUITextureControl.cs" />
+     <Compile Include="Assets\Online maps\Scripts\Controls\OnlineMapsNGUITextureControl.cs" />
+     <Compile Include="Assets\Online maps\Scripts\Controls\OnlineMapsSpriteRendererControl.cs" />
+     <Compile Include="Assets\Online maps\Scripts\Controls\OnlineMapsTextureControl.cs" />
+     <Compile Include="Assets\Online maps\Scripts\Controls\OnlineMapsTileSetControl.cs" />
+     <Compile Include="Assets\Online maps\Scripts\Controls\OnlineMapsUIImageControl.cs" />
+     <Compile Include="Assets\Online maps\Scripts\Controls\OnlineMapsUIRawImageControl.cs" />
+     <Compile Include="Assets\Online maps\Scripts\Drawing\OnlineMapsDrawingElement.cs" />
+     <Compile Include="Assets\Online maps\Scripts\Drawing\OnlineMapsDrawingLine.cs" />
+     <Compile Include="Assets\Online maps\Scripts\Drawing\OnlineMapsDrawingPoly.cs" />
+     <Compile Include="Assets\Online maps\Scripts\Drawing\OnlineMapsDrawingRect.cs" />
+     <Compile Include="Assets\Online maps\Scripts\GoogleAPI\OnlineMapsBingMapsLocation.cs" />
+     <Compile Include="Assets\Online maps\Scripts\GoogleAPI\OnlineMapsFindAutocomplete.cs" />
+     <Compile Include="Assets\Online maps\Scripts\GoogleAPI\OnlineMapsFindDirection.cs" />
+     <Compile Include="Assets\Online maps\Scripts\GoogleAPI\OnlineMapsFindDirectionAdvanced.cs" />
+     <Compile Include="Assets\Online maps\Scripts\GoogleAPI\OnlineMapsFindLocation.cs" />
+     <Compile Include="Assets\Online maps\Scripts\GoogleAPI\OnlineMapsFindPlaceDetails.cs" />
+     <Compile Include="Assets\Online maps\Scripts\GoogleAPI\OnlineMapsFindPlaces.cs" />
+     <Compile Include="Assets\Online maps\Scripts\GoogleAPI\OnlineMapsGetElevation.cs" />
+     <Compile Include="Assets\Online maps\Scripts\GoogleAPI\OnlineMapsGoogleAPIQuery.cs" />
+     <Compile Include="Assets\Online maps\Scripts\GoogleAPI\OnlineMapsOSMAPIQuery.cs" />
+     <Compile Include="Assets\Online maps\Scripts\GoogleAPI\OnlineMapsOSMNominatim.cs" />
+     <Compile Include="Assets\Online maps\Scripts\GoogleAPI\OnlineMapsOpenRouteService.cs" />
+     <Compile Include="Assets\Online maps\Scripts\Markers\OnlineMapsMarker.cs" />
+     <Compile Include="Assets\Online maps\Scripts\Markers\OnlineMapsMarker3D.cs" />
+     <Compile Include="Assets\Online maps\Scripts\Markers\OnlineMapsMarker3DInstance.cs" />
+     <Compile Include="Assets\Online maps\Scripts\Markers\OnlineMapsMarkerBase.cs" />
+     <Compile Include="Assets\Online maps\Scripts\Markers\OnlineMapsMarkerBillboard.cs" />
+     <Compile Include="Assets\Online maps\Scripts\Markers\OnlineMapsMarkerInstanceBase.cs" />
+     <Compile Include="Assets\Online maps\Scripts\OnlineMaps.cs" />
+     <Compile Include="Assets\Online maps\Scripts\OnlineMapsBuffer.cs" />
+     <Compile Include="Assets\Online maps\Scripts\OnlineMapsEnums.cs" />
+     <Compile Include="Assets\Online maps\Scripts\OnlineMapsPositionRange.cs" />
+     <Compile Include="Assets\Online maps\Scripts\OnlineMapsRange.cs" />
+     <Compile Include="Assets\Online maps\Scripts\OnlineMapsThreadManager.cs" />
+     <Compile Include="Assets\Online maps\Scripts\OnlineMapsTile.cs" />
+     <Compile Include="Assets\Online maps\Scripts\OnlineMapsUtils.cs" />
+     <Compile Include="Assets\Online maps\Scripts\OnlineMapsVector2i.cs" />
+     <Compile Include="Assets\Online maps\Scripts\Plugins\Buildings\OnlineMapsBuildingBase.cs" />
+     <Compile Include="Assets\Online maps\Scripts\Plugins\Buildings\OnlineMapsBuildingBuiltIn.cs" />
+     <Compile Include="Assets\Online maps\Scripts\Plugins\Buildings\OnlineMapsBuildingMaterial.cs" />
+     <Compile Include="Assets\Online maps\Scripts\Plugins\Buildings\OnlineMapsBuildings.cs" />
+     <Compile Include="Assets\Online maps\Scripts\Plugins\OnlineMapsDirectionStep.cs" />
+     <Compile Include="Assets\Online maps\Scripts\Plugins\OnlineMapsJPEGDecoder.cs" />
+     <Compile Include="Assets\Online maps\Scripts\Plugins\OnlineMapsLocationService.cs" />
+     <Compile Include="Assets\Online maps\Scripts\Plugins\OnlineMapsRWTConnector.cs" />
+     <Compile Include="Assets\Online maps\Scripts\XML\OnlineMapsXML.cs" />
+     <Compile Include="Assets\Online maps\Scripts\XML\OnlineMapsXMLEnum.cs" />
+     <Compile Include="Assets\Online maps\Scripts\XML\OnlineMapsXMLList.cs" />
+     <Compile Include="Assets\Online maps\Scripts\XML\OnlineMapsXMLListEnum.cs" />
+     <Compile Include="Assets\Online maps\Scripts\XML\OnlineMapsXMLNamespaceManager.cs" />
+     <Compile Include="Assets\Parser\Linea\Linea.cs" />
+     <Compile Include="Assets\Parser\Linea\LineaJson.cs" />
+     <Compile Include="Assets\Parser\Parada\Parada.cs" />
+     <Compile Include="Assets\Parser\Parada\ParadaJson.cs" />
+     <Compile Include="Assets\Parser\Prediccion\Prediccion.cs" />
+     <Compile Include="Assets\Parser\Prediccion\PrediccionCercano.cs" />
+     <Compile Include="Assets\Parser\Prediccion\PrediccionJson.cs" />
+     <Compile Include="Assets\Parser\Viejos\Banner\Banner.cs" />
+     <Compile Include="Assets\Parser\Viejos\Banner\BannerPlane.cs" />
+     <Compile Include="Assets\Parser\Viejos\Banner\LoadJsonBanner.cs" />
+     <Compile Include="Assets\Parser\Viejos\Categorias\prefabs\AddDescGO.cs" />
+     <Compile Include="Assets\Parser\Viejos\Categorias\scripts\AnalyticPropio.cs" />
+     <Compile Include="Assets\Parser\Viejos\Categorias\scripts\BackButton.cs" />
+     <Compile Include="Assets\Parser\Viejos\Categorias\scripts\Categoria.cs" />
+     <Compile Include="Assets\Parser\Viejos\Categorias\scripts\Idboton.cs" />
+     <Compile Include="Assets\Parser\Viejos\Categorias\scripts\LoadJsonCategorias.cs" />
+     <Compile Include="Assets\Parser\Viejos\Categorias\scripts\SaberNombre.cs" />
+     <Compile Include="Assets\Parser\Viejos\Categorias\scripts\TestScroll.cs" />
+     <Compile Include="Assets\Parser\Viejos\Contacto\Consulta.cs" />
+     <Compile Include="Assets\Parser\Viejos\Ofertas\Listas.cs" />
+     <Compile Include="Assets\Parser\Viejos\Ofertas\ListasJson.cs" />
+     <Compile Include="Assets\Parser\Viejos\Ofertas\LoadJsonOfertas.cs" />
+     <Compile Include="Assets\Parser\Viejos\Ofertas\NewOfertas.cs" />
+     <Compile Include="Assets\Parser\Viejos\Ofertas\NewOfertasListas.cs" />
+     <Compile Include="Assets\Parser\Viejos\Ofertas\NewOfertasListas2.cs" />
+     <Compile Include="Assets\Parser\Viejos\Ofertas\NewOfertasListas3.cs" />
+     <Compile Include="Assets\Parser\Viejos\Ofertas\NewOfertasListas4.cs" />
+     <Compile Include="Assets\Parser\Viejos\Ofertas\Ofertas.cs" />
+     <Compile Include="Assets\Parser\Viejos\Ofertas\OfertasPlane.cs" />
+     <Compile Include="Assets\Pokeparada\Activacion.cs" />
+     <Compile Include="Assets\Pokeparada\Cosas\uGUITools.cs" />
+     <Compile Include="Assets\Scripts\MenuBtn.cs" />
+     <Compile Include="Assets\Scripts\OpenLocation.cs" />
+     <Compile Include="Assets\Scripts\SelectObj.cs" />
+     <Compile Include="Assets\Scripts\TestMarker.cs" />
+     <Compile Include="Assets\TK2DROOT\tk2d\Code\Camera\tk2dCamera.cs" />
+     <Compile Include="Assets\TK2DROOT\tk2d\Code\Camera\tk2dCameraAnchor.cs" />
+     <Compile Include="Assets\TK2DROOT\tk2d\Code\Camera\tk2dCameraUtil.cs" />
+     <Compile Include="Assets\TK2DROOT\tk2d\Code\Fonts\tk2dFont.cs" />
+     <Compile Include="Assets\TK2DROOT\tk2d\Code\Fonts\tk2dFontData.cs" />
+     <Compile Include="Assets\TK2DROOT\tk2d\Code\Fonts\tk2dTextGeomGen.cs" />
+     <Compile Include="Assets\TK2DROOT\tk2d\Code\Fonts\tk2dTextMesh.cs" />
+     <Compile Include="Assets\TK2DROOT\tk2d\Code\Gui\tk2dButton.cs" />
+     <Compile Include="Assets\TK2DROOT\tk2d\Code\Runtime\tk2dResource.cs" />
+     <Compile Include="Assets\TK2DROOT\tk2d\Code\Runtime\tk2dSystem.cs" />
+     <Compile Include="Assets\TK2DROOT\tk2d\Code\Runtime\tk2dUpdateManager.cs" />
+     <Compile Include="Assets\TK2DROOT\tk2d\Code\Sprites\tk2dAnimatedSprite.cs" />
+     <Compile Include="Assets\TK2DROOT\tk2d\Code\Sprites\tk2dBaseSprite.cs" />
+     <Compile Include="Assets\TK2DROOT\tk2d\Code\Sprites\tk2dClippedSprite.cs" />
+     <Compile Include="Assets\TK2DROOT\tk2d\Code\Sprites\tk2dEditorSpriteDataUnloader.cs" />
+     <Compile Include="Assets\TK2DROOT\tk2d\Code\Sprites\tk2dPixelPerfectHelper.cs" />
+     <Compile Include="Assets\TK2DROOT\tk2d\Code\Sprites\tk2dRuntimeSpriteCollection.cs" />
+     <Compile Include="Assets\TK2DROOT\tk2d\Code\Sprites\tk2dSlicedSprite.cs" />
+     <Compile Include="Assets\TK2DROOT\tk2d\Code\Sprites\tk2dSprite.cs" />
+     <Compile Include="Assets\TK2DROOT\tk2d\Code\Sprites\tk2dSpriteAnimation.cs" />
+     <Compile Include="Assets\TK2DROOT\tk2d\Code\Sprites\tk2dSpriteAnimator.cs" />
+     <Compile Include="Assets\TK2DROOT\tk2d\Code\Sprites\tk2dSpriteAttachPoint.cs" />
+     <Compile Include="Assets\TK2DROOT\tk2d\Code\Sprites\tk2dSpriteCollection.cs" />
+     <Compile Include="Assets\TK2DROOT\tk2d\Code\Sprites\tk2dSpriteCollectionData.cs" />
+     <Compile Include="Assets\TK2DROOT\tk2d\Code\Sprites\tk2dSpriteCollectionInterfaces.cs" />
+     <Compile Include="Assets\TK2DROOT\tk2d\Code\Sprites\tk2dSpriteCollectionSize.cs" />
+     <Compile Include="Assets\TK2DROOT\tk2d\Code\Sprites\tk2dSpriteFromTexture.cs" />
+     <Compile Include="Assets\TK2DROOT\tk2d\Code\Sprites\tk2dSpriteGeomGen.cs" />
+     <Compile Include="Assets\TK2DROOT\tk2d\Code\Sprites\tk2dStaticSpriteBatcher.cs" />
+     <Compile Include="Assets\TK2DROOT\tk2d\Code\Sprites\tk2dTiledSprite.cs" />
+     <Compile Include="Assets\TK2DROOT\tk2d\Code\tk2dUtil.cs" />
+     <Compile Include="Assets\TK2DROOT\tk2dTileMap\Code\tk2dTileMap.cs" />
+     <Compile Include="Assets\TK2DROOT\tk2dTileMap\Code\tk2dTileMapBuilderUtil.cs" />
+     <Compile Include="Assets\TK2DROOT\tk2dTileMap\Code\tk2dTileMapChunks.cs" />
+     <Compile Include="Assets\TK2DROOT\tk2dTileMap\Code\tk2dTileMapColliderBuilder.cs" />
+     <Compile Include="Assets\TK2DROOT\tk2dTileMap\Code\tk2dTileMapColliderBuilder2D.cs" />
+     <Compile Include="Assets\TK2DROOT\tk2dTileMap\Code\tk2dTileMapData.cs" />
+     <Compile Include="Assets\TK2DROOT\tk2dTileMap\Code\tk2dTileMapMeshBuilder.cs" />
+     <Compile Include="Assets\TK2DROOT\tk2dTileMap_demo\Demo1\Scripts\tk2dTileMapDemoCoin.cs" />
+     <Compile Include="Assets\TK2DROOT\tk2dTileMap_demo\Demo1\Scripts\tk2dTileMapDemoFollowCam.cs" />
+     <Compile Include="Assets\TK2DROOT\tk2dTileMap_demo\Demo1\Scripts\tk2dTileMapDemoPlayer.cs" />
+     <Compile Include="Assets\TK2DROOT\tk2dUI\Code\Controls\tk2dUIBaseItemControl.cs" />
+     <Compile Include="Assets\TK2DROOT\tk2dUI\Code\Controls\tk2dUIDragItem.cs" />
+     <Compile Include="Assets\TK2DROOT\tk2dUI\Code\Controls\tk2dUIDropDownItem.cs" />
+     <Compile Include="Assets\TK2DROOT\tk2dUI\Code\Controls\tk2dUIDropDownMenu.cs" />
+     <Compile Include="Assets\TK2DROOT\tk2dUI\Code\Controls\tk2dUIHoverItem.cs" />
+     <Compile Include="Assets\TK2DROOT\tk2dUI\Code\Controls\tk2dUIMultiStateToggleButton.cs" />
+     <Compile Include="Assets\TK2DROOT\tk2dUI\Code\Controls\tk2dUIProgressBar.cs" />
+     <Compile Include="Assets\TK2DROOT\tk2dUI\Code\Controls\tk2dUIScrollableArea.cs" />
+     <Compile Include="Assets\TK2DROOT\tk2dUI\Code\Controls\tk2dUIScrollbar.cs" />
+     <Compile Include="Assets\TK2DROOT\tk2dUI\Code\Controls\tk2dUISoundItem.cs" />
+     <Compile Include="Assets\TK2DROOT\tk2dUI\Code\Controls\tk2dUITextInput.cs" />
+     <Compile Include="Assets\TK2DROOT\tk2dUI\Code\Controls\tk2dUIToggleButton.cs" />
+     <Compile Include="Assets\TK2DROOT\tk2dUI\Code\Controls\tk2dUIToggleButtonGroup.cs" />
+     <Compile Include="Assets\TK2DROOT\tk2dUI\Code\Controls\tk2dUIToggleControl.cs" />
+     <Compile Include="Assets\TK2DROOT\tk2dUI\Code\Controls\tk2dUITweenItem.cs" />
+     <Compile Include="Assets\TK2DROOT\tk2dUI\Code\Controls\tk2dUIUpDownButton.cs" />
+     <Compile Include="Assets\TK2DROOT\tk2dUI\Code\Controls\tk2dUIUpDownHoverButton.cs" />
+     <Compile Include="Assets\TK2DROOT\tk2dUI\Code\Core\tk2dUIAudioManager.cs" />
+     <Compile Include="Assets\TK2DROOT\tk2dUI\Code\Core\tk2dUICamera.cs" />
+     <Compile Include="Assets\TK2DROOT\tk2dUI\Code\Core\tk2dUIItem.cs" />
+     <Compile Include="Assets\TK2DROOT\tk2dUI\Code\Core\tk2dUILayout.cs" />
+     <Compile Include="Assets\TK2DROOT\tk2dUI\Code\Core\tk2dUILayoutContainer.cs" />
+     <Compile Include="Assets\TK2DROOT\tk2dUI\Code\Core\tk2dUILayoutContainerSizer.cs" />
+     <Compile Include="Assets\TK2DROOT\tk2dUI\Code\Core\tk2dUIManager.cs" />
+     <Compile Include="Assets\TK2DROOT\tk2dUI\Code\Core\tk2dUIMask.cs" />
+     <Compile Include="Assets\TK2DROOT\tk2dUI\Code\Core\tk2dUISpriteAnimator.cs" />
+     <Compile Include="Assets\TK2DROOT\tk2dUI\Code\Core\tk2dUITime.cs" />
+     <Compile Include="Assets\TK2DROOT\tk2dUI\Code\Core\tk2dUITouch.cs" />
+     <Compile Include="Assets\TK2DROOT\tk2dUI_demo\tk2dUIBaseDemoController.cs" />
+     <Compile Include="Assets\TK2DROOT\tk2dUI_demo\tk2dUIDemo2Controller.cs" />
+     <Compile Include="Assets\TK2DROOT\tk2dUI_demo\tk2dUIDemo3Controller.cs" />
+     <Compile Include="Assets\TK2DROOT\tk2dUI_demo\tk2dUIDemo5Controller.cs" />
+     <Compile Include="Assets\TK2DROOT\tk2dUI_demo\tk2dUIDemo6Controller.cs" />
+     <Compile Include="Assets\TK2DROOT\tk2dUI_demo\tk2dUIDemoController.cs" />
+     <Compile Include="Assets\TK2DROOT\tk2d_demo\tk2dDemoAnimController.cs" />
+     <Compile Include="Assets\TK2DROOT\tk2d_demo\tk2dDemoButtonController.cs" />
+     <Compile Include="Assets\TK2DROOT\tk2d_demo\tk2dDemoCameraController.cs" />
+     <Compile Include="Assets\TK2DROOT\tk2d_demo\tk2dDemoReloadController.cs" />
+     <Compile Include="Assets\TK2DROOT\tk2d_demo\tk2dDemoRuntimeSpriteController.cs" />
+     <Compile Include="Assets\UI Extensions\Scripts\Accordion\Accordion.cs" />
+     <Compile Include="Assets\UI Extensions\Scripts\Accordion\AccordionElement.cs" />
+     <Compile Include="Assets\UI Extensions\Scripts\Accordion\Tweening\FloatTween.cs" />
+     <Compile Include="Assets\UI Extensions\Scripts\Accordion\Tweening\ITweenValue.cs" />
+     <Compile Include="Assets\UI Extensions\Scripts\Accordion\Tweening\TweenRunner.cs" />
+     <Compile Include="Assets\UI Extensions\Scripts\BoundTooltip\BoundTooltipItem.cs" />
+     <Compile Include="Assets\UI Extensions\Scripts\BoundTooltip\BoundTooltipTrigger.cs" />
+     <Compile Include="Assets\UI Extensions\Scripts\ComboBox\AutoCompleteComboBox.cs" />
+     <Compile Include="Assets\UI Extensions\Scripts\ComboBox\ComboBox.cs" />
+     <Compile Include="Assets\UI Extensions\Scripts\ComboBox\DropDownList.cs" />
+     <Compile Include="Assets\UI Extensions\Scripts\ComboBox\DropDownListButton.cs" />
+     <Compile Include="Assets\UI Extensions\Scripts\ComboBox\DropDownListItem.cs" />
+     <Compile Include="Assets\UI Extensions\Scripts\Effects\BestFitOutline.cs" />
+     <Compile Include="Assets\UI Extensions\Scripts\Effects\CurvedText.cs" />
+     <Compile Include="Assets\UI Extensions\Scripts\Effects\CylinderText.cs" />
+     <Compile Include="Assets\UI Extensions\Scripts\Effects\Gradient.cs" />
+     <Compile Include="Assets\UI Extensions\Scripts\Effects\LetterSpacing.cs" />
+     <Compile Include="Assets\UI Extensions\Scripts\Effects\NicerOutline.cs" />
+     <Compile Include="Assets\UI Extensions\Scripts\Effects\SoftMaskScript.cs" />
+     <Compile Include="Assets\UI Extensions\Scripts\Effects\UIFlippable.cs" />
+     <Compile Include="Assets\UI Extensions\Scripts\Effects\UIImageCrop.cs" />
+     <Compile Include="Assets\UI Extensions\Scripts\HSVPicker\ColorPickerTester.cs" />
+     <Compile Include="Assets\UI Extensions\Scripts\HSVPicker\HSVPicker.cs" />
+     <Compile Include="Assets\UI Extensions\Scripts\HSVPicker\HSVSliderEvent.cs" />
+     <Compile Include="Assets\UI Extensions\Scripts\HSVPicker\HSVUtil.cs" />
+     <Compile Include="Assets\UI Extensions\Scripts\HSVPicker\HexRGB.cs" />
+     <Compile Include="Assets\UI Extensions\Scripts\HSVPicker\HsvBoxSelector.cs" />
+     <Compile Include="Assets\UI Extensions\Scripts\HSVPicker\HsvSliderPicker.cs" />
+     <Compile Include="Assets\UI Extensions\Scripts\ImageExtended.cs" />
+     <Compile Include="Assets\UI Extensions\Scripts\InputFieldEnterSubmit.cs" />
+     <Compile Include="Assets\UI Extensions\Scripts\InputFocus.cs" />
+     <Compile Include="Assets\UI Extensions\Scripts\InputModules\AimerInputModule.cs" />
+     <Compile Include="Assets\UI Extensions\Scripts\InputModules\GamePadInputModule.cs" />
+     <Compile Include="Assets\UI Extensions\Scripts\Layout\FlowLayoutGroup.cs" />
+     <Compile Include="Assets\UI Extensions\Scripts\Layout\HorizontalScrollSnap.cs" />
+     <Compile Include="Assets\UI Extensions\Scripts\Layout\RadialLayout.cs" />
+     <Compile Include="Assets\UI Extensions\Scripts\Layout\ScrollSnap.cs" />
+     <Compile Include="Assets\UI Extensions\Scripts\Layout\TileSizeFitter.cs" />
+     <Compile Include="Assets\UI Extensions\Scripts\Layout\VerticalScrollSnap.cs" />
+     <Compile Include="Assets\UI Extensions\Scripts\Primitives\DiamondGraph.cs" />
+     <Compile Include="Assets\UI Extensions\Scripts\Primitives\UICircle.cs" />
+     <Compile Include="Assets\UI Extensions\Scripts\Primitives\UICornerCut.cs" />
+     <Compile Include="Assets\UI Extensions\Scripts\Primitives\UILineRenderer.cs" />
+     <Compile Include="Assets\UI Extensions\Scripts\Primitives\UILineTextureRenderer.cs" />
+     <Compile Include="Assets\UI Extensions\Scripts\RaycastMask.cs" />
+     <Compile Include="Assets\UI Extensions\Scripts\ReorderableList\ReorderableList.cs" />
+     <Compile Include="Assets\UI Extensions\Scripts\ReorderableList\ReorderableListContent.cs" />
+     <Compile Include="Assets\UI Extensions\Scripts\ReorderableList\ReorderableListDebug.cs" />
+     <Compile Include="Assets\UI Extensions\Scripts\ReorderableList\ReorderableListElement.cs" />
+     <Compile Include="Assets\UI Extensions\Scripts\RescalingPanels\RescaleDragPanel.cs" />
+     <Compile Include="Assets\UI Extensions\Scripts\RescalingPanels\RescalePanel.cs" />
+     <Compile Include="Assets\UI Extensions\Scripts\RescalingPanels\ResizePanel.cs" />
+     <Compile Include="Assets\UI Extensions\Scripts\ReturnKeyTriggersButton.cs" />
+     <Compile Include="Assets\UI Extensions\Scripts\ScrollRectEx.cs" />
+     <Compile Include="Assets\UI Extensions\Scripts\ScrollRectExtensions.cs" />
+     <Compile Include="Assets\UI Extensions\Scripts\ScrollRectLinker.cs" />
+     <Compile Include="Assets\UI Extensions\Scripts\ScrollRectTweener.cs" />
+     <Compile Include="Assets\UI Extensions\Scripts\SelectionBox\ExampleSelectable.cs" />
+     <Compile Include="Assets\UI Extensions\Scripts\SelectionBox\IBoxSelectable.cs" />
+     <Compile Include="Assets\UI Extensions\Scripts\SelectionBox\SelectionBox.cs" />
+     <Compile Include="Assets\UI Extensions\Scripts\TabNavigation.cs" />
+     <Compile Include="Assets\UI Extensions\Scripts\ToolTip.cs" />
+     <Compile Include="Assets\UI Extensions\Scripts\UIScrollToSelection.cs" />
+     <Compile Include="Assets\UI Extensions\Scripts\UIScrollToSelectionXY.cs" />
+     <Compile Include="Assets\UI Extensions\Scripts\UISelectableExtension.cs" />
+     <Compile Include="Assets\UI Extensions\Scripts\UIWindowBase.cs" />
+     <Compile Include="Assets\UI Extensions\Scripts\Utilities\HoverTooltip.cs" />
+     <Compile Include="Assets\UI Extensions\Scripts\Utilities\SetPropertyUtility.cs" />
+     <Compile Include="Assets\UI Extensions\Scripts\Utilities\switchToRectTransform.cs" />
+     <Compile Include="Assets\UI Extensions\Scripts\VR Extensions\VRCursor.cs" />
+     <Compile Include="Assets\UI Extensions\Scripts\VR Extensions\VRInputModule.cs" />
+     <Compile Include="Assets\iTween\Plugins\iTween.cs" />
+     <Compile Include="Assets\iTween\Plugins\iTweenExtensions.cs" />
+     <Compile Include="Assets\iTween\Sample\MoveSample.cs" />
+     <Compile Include="Assets\iTween\Sample\RotateSample.cs" />
+     <Compile Include="Assets\iTween\Sample\RotateSample1.cs" />
+     <Compile Include="Assets\iTween\Sample\SampleInfo.cs" />
+     <None Include="Assets\TK2DROOT\tk2d\Shaders\LitSolidVertexColor.shader" />
+     <None Include="Assets\UI Extensions\Shaders\SoftMaskShaderText.shader" />
+     <None Include="Assets\TK2DROOT\tk2d\Goodies\TexturePacker\Exporter\2dtoolkit\exporter.xml" />
+     <None Include="Assets\TK2DROOT\tk2d\Shaders\SolidVertexColor.shader" />
+     <None Include="Assets\TK2DROOT\tk2dUI\Shaders\DepthMask.shader" />
+     <None Include="Assets\Plugins\FingerGestures\Readme.txt" />
+     <None Include="Assets\TK2DROOT\tk2d\Shaders\LitPremulVertexColor.shader" />
+     <None Include="Assets\TK2DROOT\tk2d\Shaders\PremulVertexColor.shader" />
+     <None Include="Assets\TK2DROOT\tk2d_demo\Credits.txt" />
+     <None Include="Assets\TK2DROOT\tk2d\Shaders\goodies\PackedTextMesh.shader" />
+     <None Include="Assets\UI Extensions\Shaders\SoftMaskShader.shader" />
+     <None Include="Assets\TK2DROOT\tk2d\Shaders\Blend2TexVertexColor.shader" />
+     <None Include="Assets\TK2DROOT\tk2dUI\Shaders\DepthMaskSolid.shader" />
+     <None Include="Assets\TK2DROOT\tk2dUI_demo\Assets\Dark\Fonts\Nunito24.fnt" />
+     <None Include="Assets\Plugins\Android\OneSignalConfig\AndroidManifestTemplate.xml" />
+     <None Include="Assets\Plugins\Android\OneSignalConfig\README.txt" />
+     <None Include="Assets\TK2DROOT\tk2d\Shaders\resources\BlendVertexColor.shader" />
+     <None Include="Assets\UI Extensions\Shaders\UIImageCrop.shader" />
+     <None Include="Assets\Plugins\Android\OneSignalConfig\AndroidManifest.xml" />
+     <None Include="Assets\TK2DROOT\tk2d\Shaders\LitCutoutVertexColor.shader" />
+     <None Include="Assets\TK2DROOT\tk2d\Editor\EditorUtility.shader" />
+     <None Include="Assets\Online maps\Shaders\TilesetShader.shader" />
+     <None Include="Assets\TK2DROOT\tk2d\Shaders\CutoutVertexColor.shader" />
+     <None Include="Assets\TK2DROOT\tk2d_demo\demobmfont\test.fnt" />
+     <None Include="Assets\Online maps\Shaders\TilesetCutoutShader.shader" />
+     <None Include="Assets\TK2DROOT\tk2dUI_demo\Assets\Font\OldSansBlack\OldSansBlack.fnt" />
+     <None Include="Assets\TK2DROOT\tk2d\Shaders\LitBlendVertexColor.shader" />
+     <None Include="Assets\TK2DROOT\tk2dUI_demo\Assets\Dark\Fonts\Nunito16.fnt" />
+     <None Include="Assets\Online maps\Shaders\TilesetDrawingElement.shader" />
+     <None Include="Assets\TK2DROOT\tk2dUI_demo\Assets\Dark\Fonts\Nunito32.fnt" />
+     <None Include="Assets\TK2DROOT\tk2d\Shaders\AdditiveVertexColor.shader" />
+     <None Include="Assets\TK2DROOT\tk2d_demo\democameradata\source\democamerafont.fnt" />
+ <Reference Include="UnityEngine.UI">
+ <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.Networking">
+ <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll</HintPath>
+ </Reference>
+ <Reference Include="OneSignalSDK_WP_WNS">
+ <HintPath>/Users/admin/Documents/EnerggyOnapps/Proyectos/BondicomGit/Assets/OneSignal/Platforms/OneSignalSDK_WP_WNS.dll</HintPath>
+ </Reference>
+ <Reference Include="LitJSON">
+ <HintPath>/Users/admin/Documents/EnerggyOnapps/Proyectos/BondicomGit/Assets/Parser/LitJSON.dll</HintPath>
+ </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
+      <Project>{1C1E3D2C-3B61-491F-9013-4621E049E87C}</Project>      <Name>Assembly-CSharp-firstpass</Name>    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  
+</Project>
