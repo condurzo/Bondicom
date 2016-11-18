@@ -67,44 +67,44 @@ public class MenuBtn : MonoBehaviour {
 			CartelDatos.SetActive (false);
 			Activacion.desactivoCartel = false;
 		}
-		if (Activacion.activoDatosCartel) {
-			Interno1.SetActive (true);
-			Cartel1.SetActive (true);
-			Arribo1.SetActive (true);
-			Destino1.SetActive (true);
-			Interno2.SetActive (true);
-			Cartel2.SetActive (true);	
-			Arribo2.SetActive (true);
-			Destino2.SetActive (true);
-			Cartel3.SetActive (true);		
-			Interno3.SetActive (true);
-			Arribo3.SetActive (true);	
-			Destino3.SetActive (true);	
-			Cartel4.SetActive (true);
-			Interno4.SetActive (true);
-			Arribo4.SetActive (true);
-			Destino4.SetActive (true);
-			Activacion.activoDatosCartel = false;
-		}
-		if (Activacion.desactivoDatosCartel) {
-			Interno1.SetActive (false);
-			Cartel1.SetActive (false);
-			Arribo1.SetActive (false);
-			Destino1.SetActive (false);
-			Interno2.SetActive (false);
-			Cartel2.SetActive (false);	
-			Arribo2.SetActive (false);
-			Destino2.SetActive (false);
-			Cartel3.SetActive (false);		
-			Interno3.SetActive (false);
-			Arribo3.SetActive (false);	
-			Destino3.SetActive (false);	
-			Cartel4.SetActive (false);
-			Interno4.SetActive (false);
-			Arribo4.SetActive (false);
-			Destino4.SetActive (false);
-			Activacion.desactivoDatosCartel = false;
-		}
+//		if (Activacion.activoDatosCartel) {
+//			Interno1.SetActive (true);
+//			Cartel1.SetActive (true);
+//			Arribo1.SetActive (true);
+//			Destino1.SetActive (true);
+//			Interno2.SetActive (true);
+//			Cartel2.SetActive (true);	
+//			Arribo2.SetActive (true);
+//			Destino2.SetActive (true);
+//			Cartel3.SetActive (true);		
+//			Interno3.SetActive (true);
+//			Arribo3.SetActive (true);	
+//			Destino3.SetActive (true);	
+//			Cartel4.SetActive (true);
+//			Interno4.SetActive (true);
+//			Arribo4.SetActive (true);
+//			Destino4.SetActive (true);
+//			Activacion.activoDatosCartel = false;
+//		}
+//		if (Activacion.desactivoDatosCartel) {
+//			Interno1.SetActive (false);
+//			Cartel1.SetActive (false);
+//			Arribo1.SetActive (false);
+//			Destino1.SetActive (false);
+//			Interno2.SetActive (false);
+//			Cartel2.SetActive (false);	
+//			Arribo2.SetActive (false);
+//			Destino2.SetActive (false);
+//			Cartel3.SetActive (false);		
+//			Interno3.SetActive (false);
+//			Arribo3.SetActive (false);	
+//			Destino3.SetActive (false);	
+//			Cartel4.SetActive (false);
+//			Interno4.SetActive (false);
+//			Arribo4.SetActive (false);
+//			Destino4.SetActive (false);
+//			Activacion.desactivoDatosCartel = false;
+//		}
 	}
 	public void SalirBtn(){
 		SalirCartel.SetActive (true);

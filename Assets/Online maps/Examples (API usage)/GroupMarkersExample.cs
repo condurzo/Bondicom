@@ -52,7 +52,7 @@ namespace InfinityCode.OnlineMapsExamples
         {
             List<MarkerGroup> groups = new List<MarkerGroup>();
 
-            for (int zoom = 20; zoom >= 3; zoom--)
+            for (int zoom = 18; zoom >= 14; zoom--)
             {
                 List<OnlineMapsMarker> ms = markers.Select(m => m).ToList();
 
@@ -75,10 +75,10 @@ namespace InfinityCode.OnlineMapsExamples
                                 group = new MarkerGroup(zoom, groupTexture);
                                 groups.Add(group);
                                 group.Add(marker);
-                                if (marker.range.min == 3) marker.range.min = zoom + 1;
+                                if (marker.range.min == 14) marker.range.min = zoom + 1;
                             }
                             group.Add(marker2);
-                            if (marker2.range.min == 3) marker2.range.min = zoom + 1;
+                            if (marker2.range.min == 14) marker2.range.min = zoom + 1;
                             ms.RemoveAt(k);
                             pos = group.tilePosition;
                         }

@@ -337,7 +337,7 @@ public class OnlineMapsEditor : Editor
             api.SetPosition(p.x, p.y);
         }
         EditorGUI.BeginChangeCheck();
-        api.zoom = EditorGUILayout.IntSlider("Zoom: ", api.zoom, 3, 20);
+        api.zoom = EditorGUILayout.IntSlider("Zoom: ", api.zoom, 14, 20);
         if (EditorGUI.EndChangeCheck()) dirty = true;
     }
 

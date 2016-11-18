@@ -24,7 +24,7 @@ public class OnlineMapsBuildingsEditor:Editor
         float max = buildings.zoomRange.max;
 
         EditorGUI.BeginChangeCheck();
-        EditorGUILayout.MinMaxSlider(new GUIContent(string.Format("Zoom ({0}-{1}): ", min, max)), ref min, ref max, 3, 20);
+        EditorGUILayout.MinMaxSlider(new GUIContent(string.Format("Zoom ({0}-{1}): ", min, max)), ref min, ref max, 14, 18);
         buildings.zoomRange.min = Mathf.Clamp(Mathf.RoundToInt(min), 3, 20);
         buildings.zoomRange.max = Mathf.Clamp(Mathf.RoundToInt(max), 3, 20);
 

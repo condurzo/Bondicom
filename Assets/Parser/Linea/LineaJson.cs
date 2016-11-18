@@ -28,6 +28,10 @@ public class LineaJson : MonoBehaviour
 	public List<double> Longitudes = new List<double>();
 	public List<float> LatitudesPokeParada = new List<float>();
 	public List<float> LongitudesPokeParada = new List<float>();
+	public List<float> LatitudesColectivos = new List<float>();
+	public List<float> LongitudesColectivos = new List<float>();
+	public float LatCole;
+	public float LongCole;
 	public float LatPokeParada;
 	public float LongPokeParada;
 	public string Latitud;
@@ -51,6 +55,7 @@ public class LineaJson : MonoBehaviour
 	public GameObject PokeScalar;
 	public int TempArray;
 	public string LineaPoke;
+	public Texture2D Colectivo2D;
 
 #region LINEA
 	IEnumerator Start(){
@@ -97,7 +102,10 @@ public class LineaJson : MonoBehaviour
 		LineaPoke = "1";
 		BlockeadorParadas.SetActive (true);
 		OnlineMapsControlBase3D.instance.RemoveAllMarker3D ();
+		Mapas.RemoveAllMarkers ();
 		idLinea = 253;
+		LatitudesColectivos.Clear ();
+		LongitudesColectivos.Clear ();
 		Paradas.Clear ();
 		Latitudes.Clear ();
 		Longitudes.Clear ();
@@ -116,7 +124,10 @@ public class LineaJson : MonoBehaviour
 		LineaPoke = "12";
 		BlockeadorParadas.SetActive (true);
 		OnlineMapsControlBase3D.instance.RemoveAllMarker3D ();
+		Mapas.RemoveAllMarkers ();
 		idLinea = 254;
+		LatitudesColectivos.Clear ();
+		LongitudesColectivos.Clear ();
 		Paradas.Clear ();
 		Latitudes.Clear ();
 		Longitudes.Clear ();
@@ -135,7 +146,10 @@ public class LineaJson : MonoBehaviour
 		LineaPoke = "39";
 		BlockeadorParadas.SetActive (true);
 		OnlineMapsControlBase3D.instance.RemoveAllMarker3D ();
+		Mapas.RemoveAllMarkers ();
 		idLinea = 255;
+		LatitudesColectivos.Clear ();
+		LongitudesColectivos.Clear ();
 		Paradas.Clear ();
 		Latitudes.Clear ();
 		Longitudes.Clear ();
@@ -154,7 +168,10 @@ public class LineaJson : MonoBehaviour
 		LineaPoke = "68";
 		BlockeadorParadas.SetActive (true);
 		OnlineMapsControlBase3D.instance.RemoveAllMarker3D ();
+		Mapas.RemoveAllMarkers ();
 		idLinea = 306;
+		LatitudesColectivos.Clear ();
+		LongitudesColectivos.Clear ();
 		Paradas.Clear ();
 		Latitudes.Clear ();
 		Longitudes.Clear ();
@@ -173,7 +190,10 @@ public class LineaJson : MonoBehaviour
 		LineaPoke = "102";
 		BlockeadorParadas.SetActive (true);
 		OnlineMapsControlBase3D.instance.RemoveAllMarker3D ();
+		Mapas.RemoveAllMarkers ();
 		idLinea = 308;
+		LatitudesColectivos.Clear ();
+		LongitudesColectivos.Clear ();
 		Paradas.Clear ();
 		Latitudes.Clear ();
 		Longitudes.Clear ();
@@ -192,7 +212,10 @@ public class LineaJson : MonoBehaviour
 		LineaPoke = "110";
 		BlockeadorParadas.SetActive (true);
 		OnlineMapsControlBase3D.instance.RemoveAllMarker3D ();
+		Mapas.RemoveAllMarkers ();
 		idLinea = 315;
+		LatitudesColectivos.Clear ();
+		LongitudesColectivos.Clear ();
 		Paradas.Clear ();
 		Latitudes.Clear ();
 		Longitudes.Clear ();
@@ -211,7 +234,10 @@ public class LineaJson : MonoBehaviour
 		LineaPoke = "126";
 		BlockeadorParadas.SetActive (true);
 		OnlineMapsControlBase3D.instance.RemoveAllMarker3D ();
+		Mapas.RemoveAllMarkers ();
 		idLinea = 300;
+		LatitudesColectivos.Clear ();
+		LongitudesColectivos.Clear ();
 		Paradas.Clear ();
 		Latitudes.Clear ();
 		Longitudes.Clear ();
@@ -230,7 +256,10 @@ public class LineaJson : MonoBehaviour
 		LineaPoke = "501";
 		BlockeadorParadas.SetActive (true);
 		OnlineMapsControlBase3D.instance.RemoveAllMarker3D ();
+		Mapas.RemoveAllMarkers ();
 		idLinea = 244;
+		LatitudesColectivos.Clear ();
+		LongitudesColectivos.Clear ();
 		Paradas.Clear ();
 		Latitudes.Clear ();
 		Longitudes.Clear ();
@@ -249,7 +278,10 @@ public class LineaJson : MonoBehaviour
 		LineaPoke = "503P";
 		BlockeadorParadas.SetActive (true);
 		OnlineMapsControlBase3D.instance.RemoveAllMarker3D ();
+		Mapas.RemoveAllMarkers ();
 		idLinea = 237;
+		LatitudesColectivos.Clear ();
+		LongitudesColectivos.Clear ();
 		Paradas.Clear ();
 		Latitudes.Clear ();
 		Longitudes.Clear ();
@@ -268,7 +300,10 @@ public class LineaJson : MonoBehaviour
 		LineaPoke = "COR";
 		BlockeadorParadas.SetActive (true);
 		OnlineMapsControlBase3D.instance.RemoveAllMarker3D ();
+		Mapas.RemoveAllMarkers ();
 		idLinea = 280;
+		LatitudesColectivos.Clear ();
+		LongitudesColectivos.Clear ();
 		Paradas.Clear ();
 		Latitudes.Clear ();
 		Longitudes.Clear ();
@@ -287,7 +322,10 @@ public class LineaJson : MonoBehaviour
 		LineaPoke = "SPC";
 		BlockeadorParadas.SetActive (true);
 		OnlineMapsControlBase3D.instance.RemoveAllMarker3D ();
+		Mapas.RemoveAllMarkers ();
 		idLinea = 318;
+		LatitudesColectivos.Clear ();
+		LongitudesColectivos.Clear ();
 		Paradas.Clear ();
 		Latitudes.Clear ();
 		Longitudes.Clear ();
@@ -505,7 +543,11 @@ public class LineaJson : MonoBehaviour
 			ArriboLista.Add(prediccion.t.ToString());
 			DestinoLista.Add(prediccion.hacia.ToString());
 			TempArray = i;
-			Debug.Log (TempArray);
+
+			LatCole = float.Parse(prediccion.lat);
+			LongCole = float.Parse(prediccion.lon);
+			LatitudesColectivos.Add (LatCole);
+			LongitudesColectivos.Add (LongCole);
 			//aca agregar una Lista para las lat y long de los colectivos.
 
 		}
@@ -514,30 +556,40 @@ public class LineaJson : MonoBehaviour
 			Cartel1.text = CartelLista [0];
 			Arribo1.text = ArriboLista [0];
 			Destino1.text = DestinoLista [0];
+			string TempDatos = InternoLista [0] + " - :" + ArriboLista [0] + " a " + DestinoLista [0];
+			Mapas.AddMarker (new Vector2 (LongitudesColectivos [0], LatitudesColectivos [0]), Colectivo2D, TempDatos);
 		}
 		if (TempArray >= 1) {
 			Interno2.text = InternoLista [1];	
 			Cartel2.text = CartelLista [1];		
 			Arribo2.text = ArriboLista [1];		
 			Destino2.text = DestinoLista [1];
+			string TempDatos = InternoLista [1] + " - :" + ArriboLista [1] + " a " + DestinoLista [1];
+			Mapas.AddMarker (new Vector2 (LongitudesColectivos [1], LatitudesColectivos [1]), Colectivo2D, TempDatos);
 		}
 		if (TempArray >= 2) {
 			Cartel3.text = CartelLista [2];		
 			Interno3.text = InternoLista [2];	
 			Arribo3.text = ArriboLista [2];		
-			Destino3.text = DestinoLista [2];	
+			Destino3.text = DestinoLista [2];
+			string TempDatos = InternoLista [2] + " - :" + ArriboLista [2] + " a " + DestinoLista [2];
+			Mapas.AddMarker (new Vector2 (LongitudesColectivos [2], LatitudesColectivos [2]), Colectivo2D, TempDatos);
 		}
 		if (TempArray >= 3) {
 			Cartel4.text = CartelLista [3];
 			Interno4.text = InternoLista [3];
 			Arribo4.text = ArriboLista [3];
 			Destino4.text = DestinoLista [3];
+			string TempDatos = InternoLista [3] + " - :" + ArriboLista [3] + " a " + DestinoLista [3];
+			Mapas.AddMarker (new Vector2 (LongitudesColectivos [3], LatitudesColectivos [3]), Colectivo2D, TempDatos);
 		}
 
 
+
+
 		BlockeadorParadas.SetActive (false);
-		Mapas.zoom = 15;
 		Mapas.zoom = 16;
+		Mapas.zoom = 15;
 
 	}
 }

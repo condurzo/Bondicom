@@ -14,6 +14,9 @@ public class GeoNativo : MonoBehaviour {
 	public static string LongMia;
 	public bool Actualizo;
 	public PrediccionJson Predi;
+	public OnlineMaps Mapas;
+	public Texture2D MiUbicacion;
+
 
 
 
@@ -52,8 +55,10 @@ public class GeoNativo : MonoBehaviour {
 
 	public void ParadasCercanasBtn(){
 		OnlineMapsControlBase3D.instance.RemoveAllMarker3D ();
+		Mapas.RemoveAllMarkers ();
 		LatMia = "0";
 		Actualizo = false;
+		//PrediccionJson.parsear = true;
 	}
 
 	public void GeoLocation(){
@@ -61,9 +66,12 @@ public class GeoNativo : MonoBehaviour {
 		OnlineMaps.longitude = Input.location.lastData.longitude;
 		LatMia = OnlineMaps.latitude.ToString ();
 		LongMia = OnlineMaps.longitude.ToString();
-
+		float LatTemp = float.Parse(LatMia);
+		float LongTemp = float.Parse (LongMia);
+		Mapas.AddMarker (new Vector2 (LongTemp, LatTemp), MiUbicacion, "Mi Ubicación");
 		if ((LatMia != "")&&(LatMia != "0")){
-			Predi.enabled = true;
+			//Predi.enabled = true;
+			PrediccionJson.parsear = true;
 			Actualizo = true;
 		}
 		//OnlineMaps.instance.AddMarker (size ,"Nombre-DNI");

@@ -522,7 +522,7 @@ public class OnlineMaps : MonoBehaviour
         get { return _zoom; }
         set
         {
-            int z = Mathf.Clamp(value, 3, 20);
+            int z = Mathf.Clamp(value, 14, 18);
             if (zoomRange != null) z = zoomRange.CheckAndFix(z);
             z = CheckMapSize(z);
             if (_zoom == z) return;
@@ -1631,8 +1631,10 @@ public class OnlineMaps : MonoBehaviour
 // ReSharper disable once UnusedMember.Local
     private void Start()
     {
-		latitude = -34.6090156;
-		longitude = -58.3812598;
+		//latitude = -34.6090156;
+		latitude = -34.608;
+		//longitude = -58.3812598;
+		longitude = -58.392;
 
         if (redrawOnPlay)
         {

@@ -195,9 +195,11 @@
      <Compile Include="Assets\Parser\Linea\LineaJson.cs" />
      <Compile Include="Assets\Parser\Parada\Parada.cs" />
      <Compile Include="Assets\Parser\Parada\ParadaJson.cs" />
+     <Compile Include="Assets\Parser\ParadasFavoritas\ParadasFavoritasJson.cs" />
      <Compile Include="Assets\Parser\Prediccion\Prediccion.cs" />
      <Compile Include="Assets\Parser\Prediccion\PrediccionCercano.cs" />
      <Compile Include="Assets\Parser\Prediccion\PrediccionJson.cs" />
+     <Compile Include="Assets\Parser\Prediccion\PrediccionPP.cs" />
      <Compile Include="Assets\Parser\Viejos\Banner\Banner.cs" />
      <Compile Include="Assets\Parser\Viejos\Banner\BannerPlane.cs" />
      <Compile Include="Assets\Parser\Viejos\Banner\LoadJsonBanner.cs" />
@@ -224,8 +226,10 @@
      <Compile Include="Assets\Pokeparada\Cosas\uGUITools.cs" />
      <Compile Include="Assets\Scripts\MenuBtn.cs" />
      <Compile Include="Assets\Scripts\OpenLocation.cs" />
+     <Compile Include="Assets\Scripts\PokeparadaTranform.cs" />
      <Compile Include="Assets\Scripts\SelectObj.cs" />
      <Compile Include="Assets\Scripts\TestMarker.cs" />
+     <Compile Include="Assets\Scripts\TestUno.cs" />
      <Compile Include="Assets\TK2DROOT\tk2d\Code\Camera\tk2dCamera.cs" />
      <Compile Include="Assets\TK2DROOT\tk2d\Code\Camera\tk2dCameraAnchor.cs" />
      <Compile Include="Assets\TK2DROOT\tk2d\Code\Camera\tk2dCameraUtil.cs" />
