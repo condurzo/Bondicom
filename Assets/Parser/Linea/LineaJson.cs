@@ -253,6 +253,7 @@ public class LineaJson : MonoBehaviour
 		StartCoroutine (ParadasRutina ());
 	}
 	public void Linea501Btn(){
+		PrediccionJson.ActivadorJson = true;
 		LineaPoke = "501";
 		BlockeadorParadas.SetActive (true);
 		OnlineMapsControlBase3D.instance.RemoveAllMarker3D ();

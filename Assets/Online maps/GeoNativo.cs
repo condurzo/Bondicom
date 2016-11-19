@@ -54,6 +54,7 @@ public class GeoNativo : MonoBehaviour {
 	}
 
 	public void ParadasCercanasBtn(){
+		PrediccionJson.ActivadorJson = false;
 		OnlineMapsControlBase3D.instance.RemoveAllMarker3D ();
 		Mapas.RemoveAllMarkers ();
 		LatMia = "0";

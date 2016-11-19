@@ -30,9 +30,81 @@ public class PrediccionJson : MonoBehaviour {
 	public List<string> InternoLista3 = new List<string>();
 	public List<string> InternoLista4 = new List<string>();
 	public List<string> InternoLista5 = new List<string>();
-	public List<string> CartelLista = new List<string>();
-	public List<string> ArriboLista = new List<string>();
-	public List<string> DestinoLista = new List<string>();
+	public List<string> InternoLista6 = new List<string>();
+	public List<string> InternoLista7 = new List<string>();
+	public List<string> InternoLista8 = new List<string>();
+	public List<string> InternoLista9 = new List<string>();
+	public List<string> InternoLista10 = new List<string>();
+	public List<string> InternoLista11 = new List<string>();
+	public List<string> InternoLista12 = new List<string>();
+	public List<string> InternoLista13 = new List<string>();
+	public List<string> InternoLista14 = new List<string>();
+	public List<string> InternoLista15 = new List<string>();
+	public List<string> InternoLista16 = new List<string>();
+	public List<string> InternoLista17 = new List<string>();
+	public List<string> InternoLista18 = new List<string>();
+	public List<string> InternoLista19 = new List<string>();
+	public List<string> CartelLista0 = new List<string>();
+	public List<string> CartelLista1 = new List<string>();
+	public List<string> CartelLista2 = new List<string>();
+	public List<string> CartelLista3 = new List<string>();
+	public List<string> CartelLista4 = new List<string>();
+	public List<string> CartelLista5 = new List<string>();
+	public List<string> CartelLista6 = new List<string>();
+	public List<string> CartelLista7 = new List<string>();
+	public List<string> CartelLista8 = new List<string>();
+	public List<string> CartelLista9 = new List<string>();
+	public List<string> CartelLista10 = new List<string>();
+	public List<string> CartelLista11= new List<string>();
+	public List<string> CartelLista12= new List<string>();
+	public List<string> CartelLista13= new List<string>();
+	public List<string> CartelLista14= new List<string>();
+	public List<string> CartelLista15= new List<string>();
+	public List<string> CartelLista16= new List<string>();
+	public List<string> CartelLista17= new List<string>();
+	public List<string> CartelLista18= new List<string>();
+	public List<string> CartelLista19 = new List<string>();
+	public List<string> ArriboLista0 = new List<string>();
+	public List<string> ArriboLista1 = new List<string>();
+	public List<string> ArriboLista2 = new List<string>();
+	public List<string> ArriboLista3 = new List<string>();
+	public List<string> ArriboLista4 = new List<string>();
+	public List<string> ArriboLista5 = new List<string>();
+	public List<string> ArriboLista6 = new List<string>();
+	public List<string> ArriboLista7 = new List<string>();
+	public List<string> ArriboLista8 = new List<string>();
+	public List<string> ArriboLista9 = new List<string>();
+	public List<string> ArriboLista10 = new List<string>();
+	public List<string> ArriboLista11 = new List<string>();
+	public List<string> ArriboLista12 = new List<string>();
+	public List<string> ArriboLista13 = new List<string>();
+	public List<string> ArriboLista14 = new List<string>();
+	public List<string> ArriboLista15 = new List<string>();
+	public List<string> ArriboLista16 = new List<string>();
+	public List<string> ArriboLista17 = new List<string>();
+	public List<string> ArriboLista18 = new List<string>();
+	public List<string> ArriboLista19 = new List<string>();
+	public List<string> DestinoLista0 = new List<string>();
+	public List<string> DestinoLista1 = new List<string>();
+	public List<string> DestinoLista2 = new List<string>();
+	public List<string> DestinoLista3 = new List<string>();
+	public List<string> DestinoLista4 = new List<string>();
+	public List<string> DestinoLista5 = new List<string>();
+	public List<string> DestinoLista6 = new List<string>();
+	public List<string> DestinoLista7 = new List<string>();
+	public List<string> DestinoLista8 = new List<string>();
+	public List<string> DestinoLista9 = new List<string>();
+	public List<string> DestinoLista10 = new List<string>();
+	public List<string> DestinoLista11 = new List<string>();
+	public List<string> DestinoLista12 = new List<string>();
+	public List<string> DestinoLista13 = new List<string>();
+	public List<string> DestinoLista14 = new List<string>();
+	public List<string> DestinoLista15 = new List<string>();
+	public List<string> DestinoLista16 = new List<string>();
+	public List<string> DestinoLista17 = new List<string>();
+	public List<string> DestinoLista18 = new List<string>();
+	public List<string> DestinoLista19 = new List<string>();
+
 
 	public Text Interno1,Interno2,Interno3,Interno4;
 	public Text Cartel1,Cartel2,Cartel3,Cartel4;
@@ -43,6 +115,14 @@ public class PrediccionJson : MonoBehaviour {
 
 	public int TempArrayPP;
 	public int contadorArray;
+
+	public List<Activacion> markerList;
+
+	public int currentId=0;
+	OnlineMapsMarker3D mark;
+	Activacion auxM;
+
+	public static bool ActivadorJson;
 
 	#if UNITY_EDITOR
 	public IEnumerator Start()
@@ -85,58 +165,132 @@ public class PrediccionJson : MonoBehaviour {
 			parsear = false;
 		}
 
-		if (Activacion.label0) {
-			Interno1.text = InternoLista0 [0];
-			Interno2.text = InternoLista0 [1];
-			Interno3.text = InternoLista0 [2];
-			Interno4.text = InternoLista0 [3];
-			Debug.Log ("Toco 0");
-			Activacion.label0 = false;
+		if (Activacion.vaciarTodos) {
+			Interno1.text = "";	
+			Cartel1.text = "";
+			Arribo1.text = "";
+			Destino1.text = "";
+			Interno2.text = "";	
+			Cartel2.text = "";		
+			Arribo2.text = "";		
+			Destino2.text = "";	
+			Cartel3.text = "";		
+			Interno3.text = "";	
+			Arribo3.text = "";		
+			Destino3.text = "";	
+			Cartel4.text = "";
+			Interno4.text = "";
+			Arribo4.text = "";
+			Destino4.text = "";
+			Activacion.vaciarTodos = false;
 		}
-		if (Activacion.label1) {
-			Interno1.text = InternoLista1 [0];
-			Interno2.text = InternoLista1 [1];
-			Interno3.text = InternoLista1 [2];
-			Interno4.text = InternoLista1 [3];
-			Debug.Log ("Toco 1");
-			Activacion.label1 = false;
+
+		if (Activacion.idPP0) {
+			if (InternoLista0.Count == 0) {
+				InternoLista0.Add ("Error Servicio");
+			} else {
+				Interno1.text = InternoLista0 [0];
+				Cartel1.text = CartelLista0[0];
+				Arribo1.text = ArriboLista0[0];
+				Destino1.text =DestinoLista0[0];
+			}
+			if (InternoLista0.Count < 2) {
+				InternoLista0.Add ("Error Servicio");
+			} else {
+				Interno2.text = InternoLista0 [1];
+				Cartel2.text = CartelLista0[1];
+				Arribo2.text = ArriboLista0[1];
+				Destino2.text =DestinoLista0[1];
+			}
+			if (InternoLista0.Count < 3) {
+				InternoLista0.Add ("Error Servicio");
+			} else {
+				Interno3.text = InternoLista0 [2];
+				Cartel3.text = CartelLista0[2];
+				Arribo3.text = ArriboLista0[2];
+				Destino3.text =DestinoLista0[2];
+			}
+			if (InternoLista0.Count < 4) {
+				InternoLista0.Add ("Error Servicio");
+			} else {
+				Interno4.text = InternoLista0 [3];
+				Cartel4.text = CartelLista0[3];
+				Arribo4.text = ArriboLista0[3];
+				Destino4.text =DestinoLista0[3];
+			}
+			Activacion.idPP0 = false;
 		}
-		if (Activacion.label2) {
-			Interno1.text = InternoLista2 [0];
-			Interno2.text = InternoLista2 [1];
-			Interno3.text = InternoLista2 [2];
-			Interno4.text = InternoLista2 [3];
-			Debug.Log ("Toco 2");
-			Activacion.label2 = false;
+
+		if (Activacion.idPP1) {
+			if (InternoLista1.Count == 0) {
+				InternoLista1.Add ("Error Servicio");
+			} else {
+				Interno1.text = InternoLista2 [0];
+				Cartel1.text = CartelLista1[0];
+				Arribo1.text = ArriboLista1[0];
+				Destino1.text =DestinoLista1[0];
+			}
+			if (InternoLista1.Count < 2) {
+				InternoLista1.Add ("Error Servicio");
+			} else {
+				Interno2.text = InternoLista1 [1];
+				Cartel2.text = CartelLista1[1];
+				Arribo2.text = ArriboLista1[1];
+				Destino2.text =DestinoLista1[1];
+			}
+			if (InternoLista1.Count < 3) {
+				InternoLista1.Add ("Error Servicio");
+			} else {
+				Interno3.text = InternoLista1 [2];
+				Cartel3.text = CartelLista1[2];
+				Arribo3.text = ArriboLista1[2];
+				Destino3.text =DestinoLista1[2];
+			}
+			if (InternoLista1.Count < 4) {
+				InternoLista1.Add ("Error Servicio");
+			} else {
+				Interno4.text = InternoLista1 [3];
+				Cartel4.text = CartelLista1[3];
+				Arribo4.text = ArriboLista1[3];
+				Destino4.text =DestinoLista1[3];
+			}
+			Activacion.idPP1 = false;
 		}
-		if (Activacion.label3) {
-			Interno1.text = InternoLista3 [0];
-			Interno2.text = InternoLista3 [1];
-			Interno3.text = InternoLista3 [2];
-			Interno4.text = InternoLista3 [3];
-			Debug.Log ("Toco 3");
-			Activacion.label3 = false;
-		}
-		if (Activacion.label4) {
-			Interno1.text = InternoLista4 [0];
-			Interno2.text = InternoLista4 [1];
-			Interno3.text = InternoLista4 [2];
-			Interno4.text = InternoLista4 [3];
-			Activacion.label4 = false;
-		}
-//		if (Activacion.label5) {
-//			Interno1.text = InternoLista5 [0];
-//			Interno2.text = InternoLista5 [1];
-//			Interno3.text = InternoLista5 [2];
-//			Interno4.text = InternoLista5 [3];
-//			Activacion.label5 = false;
-//		}
-		if (Activacion.label6) {
-			Interno1.text = PadreInternoLista [6] [0];
-			Interno2.text = PadreInternoLista [6] [1];
-			Interno3.text = PadreInternoLista [6] [2];
-			Interno4.text = PadreInternoLista [6] [3];
-			Activacion.label6 = false;
+
+		if (Activacion.idPP2) {
+			if (InternoLista2.Count == 0) {
+				InternoLista2.Add ("Error Servicio");
+			} else {
+				Interno1.text = InternoLista2 [0];
+				Cartel1.text = CartelLista2[0];
+				Arribo1.text = ArriboLista2[0];
+				Destino1.text =DestinoLista2[0];
+			}
+			if (InternoLista2.Count < 2) {
+				InternoLista2.Add ("Error Servicio");
+			} else {
+				Interno2.text = InternoLista2 [1];
+				Cartel2.text = CartelLista2[1];
+				Arribo2.text = ArriboLista2[1];
+				Destino2.text =DestinoLista2[1];
+			}
+			if (InternoLista2.Count < 3) {
+				InternoLista2.Add ("Error Servicio");
+			} else {
+				Interno3.text = InternoLista2 [2];
+				Cartel3.text = CartelLista2[2];
+				Arribo3.text = ArriboLista2[2];
+				Destino3.text =DestinoLista2[2];
+			}
+			if (InternoLista2.Count < 4) {
+				InternoLista2.Add ("Error Servicio");
+			} else {
+				Interno4.text = InternoLista2 [3];
+				Cartel4.text = CartelLista2[3];
+				Arribo4.text = ArriboLista2[3];
+				Destino4.text =DestinoLista2[3];
+			}
+			Activacion.idPP2 = false;
 		}
 	}
 
@@ -317,38 +471,83 @@ public class PrediccionJson : MonoBehaviour {
 	void PokeparadasSwicht(int LineaTemp,int ArrayNumTemp){
 		switch (LineaTemp) {
 		case 253://LINEA 1
-			OnlineMapsControlBase3D.instance.AddMarker3D(new Vector2 (Longitudes[ArrayNumTemp], Latitudes[ArrayNumTemp]),PPoke1);
+			mark= OnlineMapsControlBase3D.instance.AddMarker3D(new Vector2 (Longitudes[ArrayNumTemp], Latitudes[ArrayNumTemp]),PPoke1);
+			auxM = mark.instance.GetComponentInChildren<Activacion> ();
+			auxM.id = currentId;
+			currentId++;
+			markerList.Add (auxM);
 			break;
 		case 254://LINEA 12
-			OnlineMapsControlBase3D.instance.AddMarker3D (new Vector2 (Longitudes [ArrayNumTemp], Latitudes [ArrayNumTemp]), PPoke12);
-			OnlineMapsControlBase3D.instance.markers3D [ArrayNumber].label = ArrayNumber.ToString ();
+			mark= OnlineMapsControlBase3D.instance.AddMarker3D(new Vector2 (Longitudes [ArrayNumTemp], Latitudes [ArrayNumTemp]), PPoke12);
+			//OnlineMapsControlBase3D.instance.AddMarker3D (new Vector2 (Longitudes [ArrayNumTemp], Latitudes [ArrayNumTemp]), PPoke12);
+			//OnlineMapsControlBase3D.instance.markers3D [ArrayNumber].label = ArrayNumber.ToString ();
+			auxM = mark.instance.GetComponentInChildren<Activacion> ();
+			auxM.id = currentId;
+			currentId++;
+			markerList.Add (auxM);
 			break;
 		case 255://LINEA 39
-			OnlineMapsControlBase3D.instance.AddMarker3D(new Vector2 (Longitudes[ArrayNumTemp], Latitudes[ArrayNumTemp]),PPoke39);
+			mark= OnlineMapsControlBase3D.instance.AddMarker3D(new Vector2 (Longitudes[ArrayNumTemp], Latitudes[ArrayNumTemp]),PPoke39);
+			auxM = mark.instance.GetComponentInChildren<Activacion> ();
+			auxM.id = currentId;
+			currentId++;
+			markerList.Add (auxM);
 			break;
 		case 306://LINEA 68
-			OnlineMapsControlBase3D.instance.AddMarker3D(new Vector2 (Longitudes[ArrayNumTemp], Latitudes[ArrayNumTemp]),PPoke68);
+			mark= OnlineMapsControlBase3D.instance.AddMarker3D(new Vector2 (Longitudes[ArrayNumTemp], Latitudes[ArrayNumTemp]),PPoke68);
+			auxM = mark.instance.GetComponentInChildren<Activacion> ();
+			auxM.id = currentId;
+			currentId++;
+			markerList.Add (auxM);
 			break;
 		case 308://LINEA 102
-			OnlineMapsControlBase3D.instance.AddMarker3D(new Vector2 (Longitudes[ArrayNumTemp], Latitudes[ArrayNumTemp]),PPoke102);
+			mark= OnlineMapsControlBase3D.instance.AddMarker3D(new Vector2 (Longitudes[ArrayNumTemp], Latitudes[ArrayNumTemp]),PPoke102);
+			auxM = mark.instance.GetComponentInChildren<Activacion> ();
+			auxM.id = currentId;
+			currentId++;
+			markerList.Add (auxM);
 			break;
 		case 315://LINEA 110
-			OnlineMapsControlBase3D.instance.AddMarker3D(new Vector2 (Longitudes[ArrayNumTemp], Latitudes[ArrayNumTemp]),PPoke110);
+			mark= OnlineMapsControlBase3D.instance.AddMarker3D(new Vector2 (Longitudes[ArrayNumTemp], Latitudes[ArrayNumTemp]),PPoke110);
+			auxM = mark.instance.GetComponentInChildren<Activacion> ();
+			auxM.id = currentId;
+			currentId++;
+			markerList.Add (auxM);
 			break;
 		case 300://LINEA 126
-			OnlineMapsControlBase3D.instance.AddMarker3D(new Vector2 (Longitudes[ArrayNumTemp], Latitudes[ArrayNumTemp]),PPoke126);
+			mark= OnlineMapsControlBase3D.instance.AddMarker3D(new Vector2 (Longitudes[ArrayNumTemp], Latitudes[ArrayNumTemp]),PPoke126);
+			auxM = mark.instance.GetComponentInChildren<Activacion> ();
+			auxM.id = currentId;
+			currentId++;
+			markerList.Add (auxM);
 			break;
 		case 244://LINEA 501
-			OnlineMapsControlBase3D.instance.AddMarker3D(new Vector2 (Longitudes[ArrayNumTemp], Latitudes[ArrayNumTemp]),PPoke501);
+			mark= OnlineMapsControlBase3D.instance.AddMarker3D(new Vector2 (Longitudes[ArrayNumTemp], Latitudes[ArrayNumTemp]),PPoke501);
+			auxM = mark.instance.GetComponentInChildren<Activacion> ();
+			auxM.id = currentId;
+			currentId++;
+			markerList.Add (auxM);
 			break;
 		case 237://LINEA 503P
-			OnlineMapsControlBase3D.instance.AddMarker3D(new Vector2 (Longitudes[ArrayNumTemp], Latitudes[ArrayNumTemp]),PPoke503P);
+			mark= OnlineMapsControlBase3D.instance.AddMarker3D(new Vector2 (Longitudes[ArrayNumTemp], Latitudes[ArrayNumTemp]),PPoke503P);
+			auxM = mark.instance.GetComponentInChildren<Activacion> ();
+			auxM.id = currentId;
+			currentId++;
+			markerList.Add (auxM);
 			break;
 		case 280://LINEA COR
-			OnlineMapsControlBase3D.instance.AddMarker3D(new Vector2 (Longitudes[ArrayNumTemp], Latitudes[ArrayNumTemp]),PPokeCOR);
+			mark= OnlineMapsControlBase3D.instance.AddMarker3D(new Vector2 (Longitudes[ArrayNumTemp], Latitudes[ArrayNumTemp]),PPokeCOR);
+			auxM = mark.instance.GetComponentInChildren<Activacion> ();
+			auxM.id = currentId;
+			currentId++;
+			markerList.Add (auxM);
 			break;
 		case 318://LINEA SPC
-			OnlineMapsControlBase3D.instance.AddMarker3D(new Vector2 (Longitudes[ArrayNumTemp], Latitudes[ArrayNumTemp]),PPokeSPC);
+			mark= OnlineMapsControlBase3D.instance.AddMarker3D(new Vector2 (Longitudes[ArrayNumTemp], Latitudes[ArrayNumTemp]),PPokeSPC);
+			auxM = mark.instance.GetComponentInChildren<Activacion> ();
+			auxM.id = currentId;
+			currentId++;
+			markerList.Add (auxM);
 			break;
 
 		}
@@ -392,45 +591,45 @@ public class PrediccionJson : MonoBehaviour {
 
 			if (i == 0) {
 				InternoLista0.Add (prediccionPP.i.ToString ());
-				CartelLista.Add (prediccionPP.cartel.ToString ());
-				ArriboLista.Add (prediccionPP.t.ToString ());
-				DestinoLista.Add (prediccionPP.hacia.ToString ());
+				CartelLista0.Add (prediccionPP.cartel.ToString ());
+				ArriboLista0.Add (prediccionPP.t.ToString ());
+				DestinoLista0.Add (prediccionPP.hacia.ToString ());
 				TempArrayPP = i;
 			}
 
 			if (i == 1) {
 				InternoLista1.Add (prediccionPP.i.ToString ());
-				CartelLista.Add (prediccionPP.cartel.ToString ());
-				ArriboLista.Add (prediccionPP.t.ToString ());
-				DestinoLista.Add (prediccionPP.hacia.ToString ());
+				CartelLista1.Add (prediccionPP.cartel.ToString ());
+				ArriboLista1.Add (prediccionPP.t.ToString ());
+				DestinoLista1.Add (prediccionPP.hacia.ToString ());
 				TempArrayPP = i;
 			}
 			if (i == 2) {
 				InternoLista2.Add (prediccionPP.i.ToString ());
-				CartelLista.Add (prediccionPP.cartel.ToString ());
-				ArriboLista.Add (prediccionPP.t.ToString ());
-				DestinoLista.Add (prediccionPP.hacia.ToString ());
+				CartelLista2.Add (prediccionPP.cartel.ToString ());
+				ArriboLista2.Add (prediccionPP.t.ToString ());
+				DestinoLista2.Add (prediccionPP.hacia.ToString ());
 				TempArrayPP = i;
 			}
 			if (i == 3) {
 				InternoLista3.Add (prediccionPP.i.ToString ());
-				CartelLista.Add (prediccionPP.cartel.ToString ());
-				ArriboLista.Add (prediccionPP.t.ToString ());
-				DestinoLista.Add (prediccionPP.hacia.ToString ());
+				CartelLista3.Add (prediccionPP.cartel.ToString ());
+				ArriboLista3.Add (prediccionPP.t.ToString ());
+				DestinoLista3.Add (prediccionPP.hacia.ToString ());
 				TempArrayPP = i;
 			}
 			if (i == 4) {
 				InternoLista4.Add (prediccionPP.i.ToString ());
-				CartelLista.Add (prediccionPP.cartel.ToString ());
-				ArriboLista.Add (prediccionPP.t.ToString ());
-				DestinoLista.Add (prediccionPP.hacia.ToString ());
+				CartelLista4.Add (prediccionPP.cartel.ToString ());
+				ArriboLista4.Add (prediccionPP.t.ToString ());
+				DestinoLista4.Add (prediccionPP.hacia.ToString ());
 				TempArrayPP = i;
 			}
 			if (i == 5) {
 				InternoLista5.Add (prediccionPP.i.ToString ());
-				CartelLista.Add (prediccionPP.cartel.ToString ());
-				ArriboLista.Add (prediccionPP.t.ToString ());
-				DestinoLista.Add (prediccionPP.hacia.ToString ());
+				CartelLista5.Add (prediccionPP.cartel.ToString ());
+				ArriboLista5.Add (prediccionPP.t.ToString ());
+				DestinoLista5.Add (prediccionPP.hacia.ToString ());
 				TempArrayPP = i;
 			}
 

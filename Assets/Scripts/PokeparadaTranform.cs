@@ -3,13 +3,7 @@ using System.Collections;
 
 public class PokeparadaTranform : MonoBehaviour {
 	public bool activo;
-	public static int idPP;
-	public int TempId;
-	public string TempString;
-	// Use this for initialization
-	void Start () {
-	}
-	
+	public int id=0;
 	// Update is called once per frame
 	void Update () {
 		if (!activo) {
