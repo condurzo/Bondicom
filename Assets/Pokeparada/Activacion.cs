@@ -39,6 +39,7 @@ public class Activacion : MonoBehaviour {
 	public static bool idPP0,idPP1,idPP2,idPP3,idPP4,idPP5,idPP6,idPP7,idPP8,idPP9,idPP10,idPP11,idPP12,idPP13,
 						idPP14,idPP15,idPP16,idPP17,idPP18,idPP19,vaciarTodos;
 
+	public static bool TocoPP;
 	void Start(){
 
 		Camara1 = GameObject.Find ("Main Camera");
@@ -68,6 +69,7 @@ public class Activacion : MonoBehaviour {
 
 
 	void TocoBtn () {
+		
 		activarCartel = true;
 		iTween.Stop (CirculoGrande);
 		iTween.Stop (Circulo);
@@ -207,7 +209,10 @@ public class Activacion : MonoBehaviour {
 		CollBtn.enabled = true;
 		Activado = false;
 		scrollMap.GetComponent<OnlineMapsTextureControl> ().enabled = true;
-		vaciarTodos = true;
+
+		if (!PrediccionJson.ActivadorJson) {
+			vaciarTodos = true;
+		}
 	}
 
 }

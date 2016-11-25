@@ -18,8 +18,6 @@ public class GeoNativo : MonoBehaviour {
 	public Texture2D MiUbicacion;
 
 
-
-
 	IEnumerator Start() {
 		if (!Input.location.isEnabledByUser)
 			yield break;

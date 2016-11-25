@@ -56,6 +56,9 @@ public class LineaJson : MonoBehaviour
 	public int TempArray;
 	public string LineaPoke;
 	public Texture2D Colectivo2D;
+	public int ContadorListado;
+	public static bool agregando1, agregando2, agregando3, agregando4, agregando5, agregando6, agregandoNew;
+
 
 #region LINEA
 	IEnumerator Start(){
@@ -99,6 +102,8 @@ public class LineaJson : MonoBehaviour
 	}
 
 	public void Linea1Btn(){
+		PlayerPrefs.SetInt ("TempLineaId", 253);
+		PrediccionJson.ActivadorJson = true;
 		LineaPoke = "1";
 		BlockeadorParadas.SetActive (true);
 		OnlineMapsControlBase3D.instance.RemoveAllMarker3D ();
@@ -121,6 +126,8 @@ public class LineaJson : MonoBehaviour
 		StartCoroutine (ParadasRutina ());
 	}
 	public void Linea12Btn(){
+		PlayerPrefs.SetInt ("TempLineaId", 254);
+		PrediccionJson.ActivadorJson = true;
 		LineaPoke = "12";
 		BlockeadorParadas.SetActive (true);
 		OnlineMapsControlBase3D.instance.RemoveAllMarker3D ();
@@ -143,6 +150,8 @@ public class LineaJson : MonoBehaviour
 		StartCoroutine (ParadasRutina ());
 	}
 	public void Linea39Btn(){
+		PlayerPrefs.SetInt ("TempLineaId", 255);
+		PrediccionJson.ActivadorJson = true;
 		LineaPoke = "39";
 		BlockeadorParadas.SetActive (true);
 		OnlineMapsControlBase3D.instance.RemoveAllMarker3D ();
@@ -165,6 +174,8 @@ public class LineaJson : MonoBehaviour
 		StartCoroutine (ParadasRutina ());
 	}
 	public void Linea68Btn(){
+		PlayerPrefs.SetInt ("TempLineaId", 306);
+		PrediccionJson.ActivadorJson = true;
 		LineaPoke = "68";
 		BlockeadorParadas.SetActive (true);
 		OnlineMapsControlBase3D.instance.RemoveAllMarker3D ();
@@ -187,6 +198,8 @@ public class LineaJson : MonoBehaviour
 		StartCoroutine (ParadasRutina ());
 	}
 	public void Linea102Btn(){
+		PlayerPrefs.SetInt ("TempLineaId", 308);
+		PrediccionJson.ActivadorJson = true;
 		LineaPoke = "102";
 		BlockeadorParadas.SetActive (true);
 		OnlineMapsControlBase3D.instance.RemoveAllMarker3D ();
@@ -209,6 +222,8 @@ public class LineaJson : MonoBehaviour
 		StartCoroutine (ParadasRutina ());
 	}
 	public void Linea110Btn(){
+		PlayerPrefs.SetInt ("TempLineaId", 315);
+		PrediccionJson.ActivadorJson = true;
 		LineaPoke = "110";
 		BlockeadorParadas.SetActive (true);
 		OnlineMapsControlBase3D.instance.RemoveAllMarker3D ();
@@ -231,6 +246,8 @@ public class LineaJson : MonoBehaviour
 		StartCoroutine (ParadasRutina ());
 	}
 	public void Linea126Btn(){
+		PlayerPrefs.SetInt ("TempLineaId", 300);
+		PrediccionJson.ActivadorJson = true;
 		LineaPoke = "126";
 		BlockeadorParadas.SetActive (true);
 		OnlineMapsControlBase3D.instance.RemoveAllMarker3D ();
@@ -253,6 +270,7 @@ public class LineaJson : MonoBehaviour
 		StartCoroutine (ParadasRutina ());
 	}
 	public void Linea501Btn(){
+		PlayerPrefs.SetInt ("TempLineaId", 244);
 		PrediccionJson.ActivadorJson = true;
 		LineaPoke = "501";
 		BlockeadorParadas.SetActive (true);
@@ -276,6 +294,8 @@ public class LineaJson : MonoBehaviour
 		StartCoroutine (ParadasRutina ());
 	}
 	public void Linea503PBtn(){
+		PlayerPrefs.SetInt ("TempLineaId", 237);
+		PrediccionJson.ActivadorJson = true;
 		LineaPoke = "503P";
 		BlockeadorParadas.SetActive (true);
 		OnlineMapsControlBase3D.instance.RemoveAllMarker3D ();
@@ -298,6 +318,8 @@ public class LineaJson : MonoBehaviour
 		StartCoroutine (ParadasRutina ());
 	}
 	public void LineaCORBtn(){
+		PlayerPrefs.SetInt ("TempLineaId", 280);
+		PrediccionJson.ActivadorJson = true;
 		LineaPoke = "COR";
 		BlockeadorParadas.SetActive (true);
 		OnlineMapsControlBase3D.instance.RemoveAllMarker3D ();
@@ -320,6 +342,8 @@ public class LineaJson : MonoBehaviour
 		StartCoroutine (ParadasRutina ());
 	}
 	public void LineaSPCBtn(){
+		PlayerPrefs.SetInt ("TempLineaId", 318);
+		PrediccionJson.ActivadorJson = true;
 		LineaPoke = "SPC";
 		BlockeadorParadas.SetActive (true);
 		OnlineMapsControlBase3D.instance.RemoveAllMarker3D ();
@@ -409,6 +433,7 @@ public class LineaJson : MonoBehaviour
 
 	public void SaberParadas(int index){
 		idParada = int.Parse(Paradas [index]);	
+		PlayerPrefs.SetInt ("TempParadaId", idParada);
 		Debug.Log ("Soy el: " + Paradas[index]);
 		Fondo.SetActive (false);
 		Fondo2.SetActive (false);
@@ -443,40 +468,77 @@ public class LineaJson : MonoBehaviour
 
 		OnlineMaps.latitude = Latitudes[index];
 		OnlineMaps.longitude = Longitudes[index];
+		double TempLatIndex = Latitudes[index];
+		double TempLongIndex = Longitudes[index];
+		PlayerPrefs.SetFloat ("LatitudTemp", (float)TempLatIndex);
+		PlayerPrefs.SetFloat ("LongitudTemp",(float)TempLongIndex);
 
 		switch (LineaPoke) {
 		case "1":
-			OnlineMapsControlBase3D.instance.AddMarker3D(new Vector2 (LongitudesPokeParada[index], LatitudesPokeParada[index]),PPoke1);
+			OnlineMapsControlBase3D.instance.AddMarker3D (new Vector2 (LongitudesPokeParada [index], LatitudesPokeParada [index]), PPoke1);
+			Mapas.RemoveAllMarkers ();
+			ContadorListado = PlayerPrefs.GetInt ("ContadorListado");
+			Agregar (ParadasLista [index].GetComponentInChildren<Text> ().text);
 			break;
 		case "12":
-			OnlineMapsControlBase3D.instance.AddMarker3D(new Vector2 (LongitudesPokeParada[index], LatitudesPokeParada[index]),PPoke12);
+			OnlineMapsControlBase3D.instance.AddMarker3D (new Vector2 (LongitudesPokeParada [index], LatitudesPokeParada [index]), PPoke12);
+			Mapas.RemoveAllMarkers ();
+			ContadorListado = PlayerPrefs.GetInt ("ContadorListado");
+			Agregar (ParadasLista [index].GetComponentInChildren<Text> ().text);
 			break;
 		case "39":
 			OnlineMapsControlBase3D.instance.AddMarker3D(new Vector2 (LongitudesPokeParada[index], LatitudesPokeParada[index]),PPoke39);
+			Mapas.RemoveAllMarkers ();
+			ContadorListado = PlayerPrefs.GetInt ("ContadorListado");
+			Agregar (ParadasLista [index].GetComponentInChildren<Text> ().text);
 			break;
 		case "68":
 			OnlineMapsControlBase3D.instance.AddMarker3D(new Vector2 (LongitudesPokeParada[index], LatitudesPokeParada[index]),PPoke68);
+			Mapas.RemoveAllMarkers ();
+			ContadorListado = PlayerPrefs.GetInt ("ContadorListado");
+			Agregar (ParadasLista [index].GetComponentInChildren<Text> ().text);
 			break;
 		case "102":
 			OnlineMapsControlBase3D.instance.AddMarker3D(new Vector2 (LongitudesPokeParada[index], LatitudesPokeParada[index]),PPoke102);
+			Mapas.RemoveAllMarkers ();
+			ContadorListado = PlayerPrefs.GetInt ("ContadorListado");
+			Agregar (ParadasLista [index].GetComponentInChildren<Text> ().text);
 			break;
 		case "110":
 			OnlineMapsControlBase3D.instance.AddMarker3D(new Vector2 (LongitudesPokeParada[index], LatitudesPokeParada[index]),PPoke110);
+			Mapas.RemoveAllMarkers ();
+			ContadorListado = PlayerPrefs.GetInt ("ContadorListado");
+			Agregar (ParadasLista [index].GetComponentInChildren<Text> ().text);
 			break;
 		case "126":
 			OnlineMapsControlBase3D.instance.AddMarker3D(new Vector2 (LongitudesPokeParada[index], LatitudesPokeParada[index]),PPoke126);
+			Mapas.RemoveAllMarkers ();
+			ContadorListado = PlayerPrefs.GetInt ("ContadorListado");
+			Agregar (ParadasLista [index].GetComponentInChildren<Text> ().text);
 			break;
 		case "501":
 			OnlineMapsControlBase3D.instance.AddMarker3D(new Vector2 (LongitudesPokeParada[index], LatitudesPokeParada[index]),PPoke501);
+			Mapas.RemoveAllMarkers ();
+			ContadorListado = PlayerPrefs.GetInt ("ContadorListado");
+			Agregar (ParadasLista [index].GetComponentInChildren<Text> ().text);
 			break;
 		case "503P":
 			OnlineMapsControlBase3D.instance.AddMarker3D(new Vector2 (LongitudesPokeParada[index], LatitudesPokeParada[index]),PPoke503P);
+			Mapas.RemoveAllMarkers ();
+			ContadorListado = PlayerPrefs.GetInt ("ContadorListado");
+			Agregar (ParadasLista [index].GetComponentInChildren<Text> ().text);
 			break;
 		case "COR":
 			OnlineMapsControlBase3D.instance.AddMarker3D(new Vector2 (LongitudesPokeParada[index], LatitudesPokeParada[index]),PPokeCOR);
+			Mapas.RemoveAllMarkers ();
+			ContadorListado = PlayerPrefs.GetInt ("ContadorListado");
+			Agregar (ParadasLista [index].GetComponentInChildren<Text> ().text);
 			break;
 		case "SPC":
 			OnlineMapsControlBase3D.instance.AddMarker3D(new Vector2 (LongitudesPokeParada[index], LatitudesPokeParada[index]),PPokeSPC);
+			Mapas.RemoveAllMarkers ();
+			ContadorListado = PlayerPrefs.GetInt ("ContadorListado");
+			Agregar (ParadasLista [index].GetComponentInChildren<Text> ().text);
 			break;
 			
 		}
@@ -592,6 +654,46 @@ public class LineaJson : MonoBehaviour
 		Mapas.zoom = 16;
 		Mapas.zoom = 15;
 
+	}
+
+
+
+	public void Agregar(string Nombre){
+		
+		if (ContadorListado == 0) {
+			PlayerPrefs.SetString ("PPL0", Nombre);
+			agregando1 = true;
+			PlayerPrefs.SetInt ("Activo1", 1);
+		}
+		if (ContadorListado == 1) {
+			PlayerPrefs.SetString ("PPL1", Nombre);
+			agregando2 = true;
+			PlayerPrefs.SetInt ("Activo2", 1);
+		}
+		if (ContadorListado == 2) {
+			PlayerPrefs.SetString ("PPL2", Nombre);
+			agregando3 = true;
+			PlayerPrefs.SetInt ("Activo3", 1);
+		}
+		if (ContadorListado == 3) {
+			PlayerPrefs.SetString ("PPL3", Nombre);
+			agregando4 = true;
+			PlayerPrefs.SetInt ("Activo4", 1);
+		}
+		if (ContadorListado == 4) {
+			PlayerPrefs.SetString ("PPL4", Nombre);
+			agregando5 = true;
+			PlayerPrefs.SetInt ("Activo5", 1);
+		}
+		if (ContadorListado == 5) {
+			PlayerPrefs.SetString ("PPL5", Nombre);
+			agregando6 = true;
+			PlayerPrefs.SetInt ("Activo6", 1);
+		}
+		if (ContadorListado >= 6) {
+			PlayerPrefs.SetString ("NewPP", Nombre);
+			agregandoNew = true;
+		}
 	}
 }
 
