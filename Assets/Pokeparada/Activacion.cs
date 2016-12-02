@@ -69,7 +69,7 @@ public class Activacion : MonoBehaviour {
 
 
 	void TocoBtn () {
-		
+		scrollMap.GetComponent<OnlineMaps> ().enabled = false;
 		activarCartel = true;
 		iTween.Stop (CirculoGrande);
 		iTween.Stop (Circulo);
@@ -82,6 +82,7 @@ public class Activacion : MonoBehaviour {
 		Activado = true;
 		scrollMap.GetComponent<OnlineMapsTextureControl> ().enabled = false;
 
+			
 		if (!PrediccionJson.ActivadorJson) {
 			if (id == 0) {
 				idPP0 = true;
@@ -194,6 +195,7 @@ public class Activacion : MonoBehaviour {
 	}
 
 	void Close(){
+		scrollMap.GetComponent<OnlineMaps> ().enabled = true;
 		ContadorGirando = 0;
 		Girando = false;
 		activarCartel = false;

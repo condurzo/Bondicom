@@ -19,23 +19,27 @@ public class MenuBtn : MonoBehaviour {
 	public GameObject Cartel1,Cartel2,Cartel3,Cartel4;
 	public GameObject Arribo1,Arribo2,Arribo3,Arribo4;
 	public GameObject Destino1,Destino2,Destino3,Destino4;
+
+	public OnlineMaps Mapa;
 	//<uses-sdk android:minSdkVersion="9" android:targetSdkVersion="24" />
 
 	public void OpenMenu () {
 		Blockeador.SetActive (true);
-		iTween.MoveTo (MenuGO, iTween.Hash ("x", -0.5f ,"time", .4, "loopType", "none"
+		iTween.MoveTo (MenuGO, iTween.Hash ("x", 0.8f ,"time", .4, "loopType", "none"
 			, "delay", 0, "easeType", "easeInOutQuad"));
 		MenuGris.SetActive (true);
 		BtnOpen.SetActive (false);
 		BtnClose.SetActive (true);
+		Mapa.enabled = false;
 	}
 	public void CloseMenu(){
 		Blockeador.SetActive (false);
-		iTween.MoveTo (MenuGO, iTween.Hash ("x", -8, "time", .4, "loopType", "none"
+		iTween.MoveTo (MenuGO, iTween.Hash ("x", 8, "time", .4, "loopType", "none"
 			, "delay", 0, "easeType", "easeInOutQuad"));
 		MenuGris.SetActive (false);
 		BtnOpen.SetActive (true);
 		BtnClose.SetActive (false);
+		Mapa.enabled = true;
 	}
 
 	public void CancelarTodos(){
@@ -121,4 +125,13 @@ public class MenuBtn : MonoBehaviour {
 	}
 		
 
+	public void FacebookBtn(){
+		Application.OpenURL ("https://www.facebook.com/nextbondi");
+	}
+	public void TwitterBtn(){
+		Application.OpenURL ("https://twitter.com/nextbondi");
+	}
+	public void EntroQuienes(){
+		Mapa.enabled = false;
+	}
 }

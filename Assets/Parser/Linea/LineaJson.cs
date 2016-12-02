@@ -619,7 +619,7 @@ public class LineaJson : MonoBehaviour
 			Cartel1.text = CartelLista [0];
 			Arribo1.text = ArriboLista [0];
 			Destino1.text = DestinoLista [0];
-			string TempDatos = InternoLista [0] + " - :" + ArriboLista [0] + " a " + DestinoLista [0];
+			string TempDatos = InternoLista [0] + " - :" + ArriboLista [0] +"\r\n"+ " a " + DestinoLista [0];
 			Mapas.AddMarker (new Vector2 (LongitudesColectivos [0], LatitudesColectivos [0]), Colectivo2D, TempDatos);
 		}
 		if (TempArray >= 1) {
@@ -627,7 +627,7 @@ public class LineaJson : MonoBehaviour
 			Cartel2.text = CartelLista [1];		
 			Arribo2.text = ArriboLista [1];		
 			Destino2.text = DestinoLista [1];
-			string TempDatos = InternoLista [1] + " - :" + ArriboLista [1] + " a " + DestinoLista [1];
+			string TempDatos = InternoLista [1] + " - :" + ArriboLista [1] +"\r\n"+ " a " + DestinoLista [1];
 			Mapas.AddMarker (new Vector2 (LongitudesColectivos [1], LatitudesColectivos [1]), Colectivo2D, TempDatos);
 		}
 		if (TempArray >= 2) {
@@ -635,7 +635,7 @@ public class LineaJson : MonoBehaviour
 			Interno3.text = InternoLista [2];	
 			Arribo3.text = ArriboLista [2];		
 			Destino3.text = DestinoLista [2];
-			string TempDatos = InternoLista [2] + " - :" + ArriboLista [2] + " a " + DestinoLista [2];
+			string TempDatos = InternoLista [2] + " - :" + ArriboLista [2] +"\r\n"+ " a " + DestinoLista [2];
 			Mapas.AddMarker (new Vector2 (LongitudesColectivos [2], LatitudesColectivos [2]), Colectivo2D, TempDatos);
 		}
 		if (TempArray >= 3) {
@@ -643,7 +643,7 @@ public class LineaJson : MonoBehaviour
 			Interno4.text = InternoLista [3];
 			Arribo4.text = ArriboLista [3];
 			Destino4.text = DestinoLista [3];
-			string TempDatos = InternoLista [3] + " - :" + ArriboLista [3] + " a " + DestinoLista [3];
+			string TempDatos = InternoLista [3] + " - :" + ArriboLista [3] +"\r\n"+ " a " + DestinoLista [3];
 			Mapas.AddMarker (new Vector2 (LongitudesColectivos [3], LatitudesColectivos [3]), Colectivo2D, TempDatos);
 		}
 

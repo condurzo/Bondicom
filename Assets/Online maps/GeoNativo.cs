@@ -67,7 +67,7 @@ public class GeoNativo : MonoBehaviour {
 		LongMia = OnlineMaps.longitude.ToString();
 		float LatTemp = float.Parse(LatMia);
 		float LongTemp = float.Parse (LongMia);
-		Mapas.AddMarker (new Vector2 (LongTemp, LatTemp), MiUbicacion, "Mi Ubicación");
+		Mapas.AddMarker (new Vector2 (LongTemp, LatTemp), MiUbicacion,  "");
 		if ((LatMia != "")&&(LatMia != "0")){
 			//Predi.enabled = true;
 			PrediccionJson.parsear = true;
